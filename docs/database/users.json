@@ -1,0 +1,56 @@
+[
+  {
+    "_id": {
+      "$oid": "65c4d966d0fb9c5e760e5a70"
+    },
+    "name": "admin",
+    "email": "admin@admin.com",
+    "password": "$2a$10$yL5kAbyUpkPWkwmDoZcwt.UmK3BEJ1MSfWmKy7Ag40PxjQECkPBo2",
+    "role": 4050,
+    "code": "TZD9YINF",
+    "date": {
+      "$date": "2024-02-08T13:38:46.651Z"
+    },
+    "__v": 0,
+    "last_login": {
+      "$date": "2024-10-30T13:34:02.885Z"
+    },
+    "blocked": false
+  },
+  {
+    "_id": {
+      "$oid": "66af8e39c5bc73e2c6ae3aaa"
+    },
+    "name": "mod",
+    "email": "mod@mod.com",
+    "password": "$2a$10$mY8hqLXqv8t8dR2hHpGpIOjR.1cmTvxuXjqWdCsG0Aui.X0UCAmqK",
+    "role": 2410,
+    "code": "65LQRYB2",
+    "date": {
+      "$date": "2024-08-04T14:20:41.337Z"
+    },
+    "__v": 0,
+    "last_login": {
+      "$date": "2024-10-26T20:38:17.231Z"
+    },
+    "blocked": false
+  },
+  {
+    "_id": {
+      "$oid": "66af9088b75c56feabf92135"
+    },
+    "name": "user",
+    "email": "user@user.com",
+    "password": "$2a$10$gngkZCg/aMS8cAV8lG96N.7iHFiXACeB4P.2.kjv9cNGdzB7HRxli",
+    "role": 1201,
+    "code": "8E5BHZHB",
+    "date": {
+      "$date": "2024-08-04T14:30:32.966Z"
+    },
+    "__v": 0,
+    "last_login": {
+      "$date": "2024-10-26T20:38:41.727Z"
+    },
+    "blocked": false
+  }
+]

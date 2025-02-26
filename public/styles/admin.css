@@ -1,0 +1,479 @@
+@import "./main.css";
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.info-quiz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: rgba(var(--color-main), 1);
+  overflow: auto;
+}
+.info-quiz h2 {
+  width: 100%;
+  padding: 0 1em;
+  font-size: 2em;
+  font-weight: 600;
+  color: rgb(var(--color-accent));
+  margin: 1em 0;
+  border-bottom: 0.1em solid rgba(var(--color-accent-light), 0.8);
+}
+.info-quiz h2 p {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: rgb(var(--color-accent));
+  margin: 0.5em 0;
+}
+.info-quiz h2 p:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: rgb(var(--color-secondary));
+}
+.info-quiz ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.info-quiz ul li {
+  display: flex;
+  min-width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 2em;
+  padding: 1em 3em;
+  font-size: 1.1em;
+  border-bottom: 0.1em solid rgba(var(--color-accent), 0.25);
+}
+.info-quiz ul li:last-of-type {
+  border-bottom: none;
+}
+.info-quiz ul li p {
+  font-size: 1.1em;
+  color: rgb(var(--color-secondary));
+  margin: 0.15em 0;
+}
+.info-quiz button {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+.info-quiz button svg {
+  width: 4em;
+  height: 4em;
+  stroke: rgb(var(--color-accent));
+}
+
+.report {
+  width: 100%;
+}
+.report h2 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgb(var(--color-secondary));
+  margin: 1em 0;
+  padding: 0 1em;
+  border-bottom: 0.1em solid rgba(var(--color-accent-light), 0.8);
+}
+
+.questions {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  height: 100%;
+  z-index: 99999;
+  background-color: rgba(var(--color-main), 0.98);
+  transition: all 0.2s ease-in-out;
+  overflow-y: auto;
+}
+.questions.active {
+  right: 0;
+}
+@media screen and (max-width: 1366px) {
+  .questions {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .questions {
+    width: 100%;
+  }
+}
+.questions-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: rgba(var(--color-main), 0.98);
+  border-bottom: 0.1em solid rgba(var(--color-accent), 0.25);
+}
+.questions-header h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: rgb(var(--color-secondary));
+  margin: 1em 0;
+  padding: 0 1em;
+  border-left: 0.1em solid rgba(var(--color-accent), 0.25);
+}
+.questions-header button {
+  background-color: transparent;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+.questions-header button svg {
+  width: 4em;
+  height: 4em;
+  stroke: rgb(var(--color-accent));
+}
+.questions-body, .questions-open {
+  width: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.questions-body-item, .questions-open-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 1em;
+  padding: 1em;
+  border-bottom: 0.1em solid rgba(var(--color-accent), 0.25);
+}
+.questions-body-item h4, .questions-open-item h4 {
+  width: 100%;
+  text-align: right;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: rgb(var(--color-secondary));
+  margin: 0.5em 0;
+}
+.questions-body-item textarea, .questions-open-item textarea {
+  width: 100%;
+  text-align: left;
+  background-color: transparent;
+  padding: 0.25em 0.5em;
+  border-radius: 0.5em;
+  border: 0.1em solid rgba(var(--color-accent), 0.5);
+  margin: 0.5em 0;
+  font-size: 1em;
+  color: rgb(var(--color-secondary));
+  resize: vertical;
+  min-height: 5em;
+  height: auto;
+}
+.questions-body-item-buttons, .questions-open-item-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.questions-body-item-buttons button, .questions-open-item-buttons button {
+  width: 100%;
+  background-color: rgba(var(--color-accent-light), 0.25);
+  outline: none;
+  border: none;
+  padding: 0.5em;
+  margin: 0 0.25em;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: rgb(var(--color-secondary));
+  border-radius: 0.25em;
+  transition: background-color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.questions-body-item-buttons button:hover, .questions-open-item-buttons button:hover {
+  background-color: rgba(var(--color-accent-light), 0.35);
+}
+
+main .admin-list {
+  padding: 1em 1em 0 1em;
+  width: 100%;
+  list-style: none;
+}
+main .admin-list-items, main .admin-list-header {
+  list-style-type: none;
+  line-height: 1.5;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+main .admin-list-items {
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+  margin: 0;
+  margin-bottom: 1em;
+  gap: 1em;
+}
+main .admin-list-items-code, main .admin-list-items-academy, main .admin-list-items-users, main .admin-list-items-quiz {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .admin-list-items-code.hide .admin-list-items-code-title svg, main .admin-list-items-code.hide .admin-list-items-academy-title svg, main .admin-list-items-code.hide .admin-list-items-users-title svg, main .admin-list-items-code.hide .admin-list-items-quiz-title svg, main .admin-list-items-academy.hide .admin-list-items-code-title svg, main .admin-list-items-academy.hide .admin-list-items-academy-title svg, main .admin-list-items-academy.hide .admin-list-items-users-title svg, main .admin-list-items-academy.hide .admin-list-items-quiz-title svg, main .admin-list-items-users.hide .admin-list-items-code-title svg, main .admin-list-items-users.hide .admin-list-items-academy-title svg, main .admin-list-items-users.hide .admin-list-items-users-title svg, main .admin-list-items-users.hide .admin-list-items-quiz-title svg, main .admin-list-items-quiz.hide .admin-list-items-code-title svg, main .admin-list-items-quiz.hide .admin-list-items-academy-title svg, main .admin-list-items-quiz.hide .admin-list-items-users-title svg, main .admin-list-items-quiz.hide .admin-list-items-quiz-title svg {
+  transform: rotate(180deg);
+}
+main .admin-list-items-code.hide .admin-list-items-code-table, main .admin-list-items-code.hide .admin-list-items-academy-table, main .admin-list-items-code.hide .admin-list-items-users-table, main .admin-list-items-code.hide .admin-list-items-quiz-table, main .admin-list-items-academy.hide .admin-list-items-code-table, main .admin-list-items-academy.hide .admin-list-items-academy-table, main .admin-list-items-academy.hide .admin-list-items-users-table, main .admin-list-items-academy.hide .admin-list-items-quiz-table, main .admin-list-items-users.hide .admin-list-items-code-table, main .admin-list-items-users.hide .admin-list-items-academy-table, main .admin-list-items-users.hide .admin-list-items-users-table, main .admin-list-items-users.hide .admin-list-items-quiz-table, main .admin-list-items-quiz.hide .admin-list-items-code-table, main .admin-list-items-quiz.hide .admin-list-items-academy-table, main .admin-list-items-quiz.hide .admin-list-items-users-table, main .admin-list-items-quiz.hide .admin-list-items-quiz-table {
+  display: none;
+}
+main .admin-list-items-code-title, main .admin-list-items-academy-title, main .admin-list-items-users-title, main .admin-list-items-quiz-title {
+  border-bottom: 0.1em solid rgb(var(--color-accent));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1em;
+  cursor: pointer;
+}
+main .admin-list-items-code-title h2, main .admin-list-items-academy-title h2, main .admin-list-items-users-title h2, main .admin-list-items-quiz-title h2 {
+  font-size: 1.5em;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
+  width: 100%;
+  margin: 0;
+  text-align: left;
+}
+main .admin-list-items-code-title svg, main .admin-list-items-academy-title svg, main .admin-list-items-users-title svg, main .admin-list-items-quiz-title svg {
+  width: 2em;
+  height: 2em;
+  stroke: rgb(var(--color-accent));
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+main .admin-list-items-code-table, main .admin-list-items-academy-table, main .admin-list-items-users-table, main .admin-list-items-quiz-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+main .admin-list-items-code-table thead, main .admin-list-items-academy-table thead, main .admin-list-items-users-table thead, main .admin-list-items-quiz-table thead {
+  color: rgb(var(--color-main));
+}
+main .admin-list-items-code-table thead th, main .admin-list-items-academy-table thead th, main .admin-list-items-users-table thead th, main .admin-list-items-quiz-table thead th {
+  position: relative;
+  box-shadow: 0 0.25em 1em rgba(var(--color-accent), 0.25);
+  background-color: rgb(var(--color-accent));
+  padding: 0.5em;
+  text-align: center;
+  font-size: 1.2em;
+}
+main .admin-list-items-code-table thead th sup svg, main .admin-list-items-academy-table thead th sup svg, main .admin-list-items-users-table thead th sup svg, main .admin-list-items-quiz-table thead th sup svg {
+  width: 1.5em;
+  height: 1.5em;
+  stroke: rgb(var(--color-main));
+  cursor: pointer;
+}
+main .admin-list-items-code-table thead th:first-of-type, main .admin-list-items-academy-table thead th:first-of-type, main .admin-list-items-users-table thead th:first-of-type, main .admin-list-items-quiz-table thead th:first-of-type {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+main .admin-list-items-code-table thead th:last-of-type, main .admin-list-items-academy-table thead th:last-of-type, main .admin-list-items-users-table thead th:last-of-type, main .admin-list-items-quiz-table thead th:last-of-type {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+main .admin-list-items-code-table thead #col-quiz-file-table, main .admin-list-items-academy-table thead #col-quiz-file-table, main .admin-list-items-users-table thead #col-quiz-file-table, main .admin-list-items-quiz-table thead #col-quiz-file-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .admin-list-items-code-table tbody tr, main .admin-list-items-academy-table tbody tr, main .admin-list-items-users-table tbody tr, main .admin-list-items-quiz-table tbody tr {
+  color: rgb(var(--color-secondary));
+}
+main .admin-list-items-code-table tbody tr:nth-child(2n-1), main .admin-list-items-academy-table tbody tr:nth-child(2n-1), main .admin-list-items-users-table tbody tr:nth-child(2n-1), main .admin-list-items-quiz-table tbody tr:nth-child(2n-1) {
+  background: linear-gradient(90deg, transparent, rgba(var(--color-accent), 0.05) 5% 95%, transparent);
+}
+main .admin-list-items-code-table tbody tr td, main .admin-list-items-academy-table tbody tr td, main .admin-list-items-users-table tbody tr td, main .admin-list-items-quiz-table tbody tr td {
+  padding: 0.5em;
+}
+main .admin-list-items-code-table tbody tr td.no-data, main .admin-list-items-academy-table tbody tr td.no-data, main .admin-list-items-users-table tbody tr td.no-data, main .admin-list-items-quiz-table tbody tr td.no-data {
+  text-align: center;
+  font-weight: 600;
+  color: rgb(var(--color-accent));
+}
+main .admin-list-items-code-table tbody tr td .table-td-content, main .admin-list-items-academy-table tbody tr td .table-td-content, main .admin-list-items-users-table tbody tr td .table-td-content, main .admin-list-items-quiz-table tbody tr td .table-td-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .admin-list-items-code-table tbody tr td .table-td-content select,
+main .admin-list-items-code-table tbody tr td .table-td-content input, main .admin-list-items-academy-table tbody tr td .table-td-content select,
+main .admin-list-items-academy-table tbody tr td .table-td-content input, main .admin-list-items-users-table tbody tr td .table-td-content select,
+main .admin-list-items-users-table tbody tr td .table-td-content input, main .admin-list-items-quiz-table tbody tr td .table-td-content select,
+main .admin-list-items-quiz-table tbody tr td .table-td-content input {
+  width: 100%;
+  padding: 0.5em;
+  border: 0.1em solid rgb(var(--color-accent));
+  border-radius: 0.5em;
+  background-color: transparent;
+  color: rgb(var(--color-accent));
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+main .admin-list-items-code-table tbody tr td .table-td-content select option,
+main .admin-list-items-code-table tbody tr td .table-td-content input option, main .admin-list-items-academy-table tbody tr td .table-td-content select option,
+main .admin-list-items-academy-table tbody tr td .table-td-content input option, main .admin-list-items-users-table tbody tr td .table-td-content select option,
+main .admin-list-items-users-table tbody tr td .table-td-content input option, main .admin-list-items-quiz-table tbody tr td .table-td-content select option,
+main .admin-list-items-quiz-table tbody tr td .table-td-content input option {
+  background-color: rgb(var(--color-accent));
+  color: rgb(var(--color-main));
+  font-weight: 600;
+}
+main .admin-list-items-code-table tbody tr td .table-td-content input, main .admin-list-items-academy-table tbody tr td .table-td-content input, main .admin-list-items-users-table tbody tr td .table-td-content input, main .admin-list-items-quiz-table tbody tr td .table-td-content input {
+  cursor: text;
+}
+main .admin-list-items-code-table tbody tr td .table-td-content button, main .admin-list-items-academy-table tbody tr td .table-td-content button, main .admin-list-items-users-table tbody tr td .table-td-content button, main .admin-list-items-quiz-table tbody tr td .table-td-content button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0.5em;
+  cursor: pointer;
+}
+main .admin-list-items-code-table tbody tr td .table-td-content button span, main .admin-list-items-academy-table tbody tr td .table-td-content button span, main .admin-list-items-users-table tbody tr td .table-td-content button span, main .admin-list-items-quiz-table tbody tr td .table-td-content button span {
+  padding: 0 0.5em;
+  font-size: 1.5em;
+}
+main .admin-list-items-code-table tbody tr td .table-td-content button svg, main .admin-list-items-academy-table tbody tr td .table-td-content button svg, main .admin-list-items-users-table tbody tr td .table-td-content button svg, main .admin-list-items-quiz-table tbody tr td .table-td-content button svg {
+  width: 2em;
+  stroke: rgb(var(--color-accent));
+}
+main .admin-list-items-code-table tbody tr td .table-td-content svg, main .admin-list-items-academy-table tbody tr td .table-td-content svg, main .admin-list-items-users-table tbody tr td .table-td-content svg, main .admin-list-items-quiz-table tbody tr td .table-td-content svg {
+  width: 2em;
+  stroke: rgb(var(--color-accent));
+}
+main .admin-list-items-code-table tbody tr td .table-td-content p, main .admin-list-items-academy-table tbody tr td .table-td-content p, main .admin-list-items-users-table tbody tr td .table-td-content p, main .admin-list-items-quiz-table tbody tr td .table-td-content p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 0.25em;
+  color: rgb(var(--color-secondary));
+}
+main .admin-list-items-code-table tbody tr td .table-td-content p svg, main .admin-list-items-academy-table tbody tr td .table-td-content p svg, main .admin-list-items-users-table tbody tr td .table-td-content p svg, main .admin-list-items-quiz-table tbody tr td .table-td-content p svg {
+  width: 1.5em;
+}
+main .admin-list-items-code-table tbody tr td .table-td-content span, main .admin-list-items-academy-table tbody tr td .table-td-content span, main .admin-list-items-users-table tbody tr td .table-td-content span, main .admin-list-items-quiz-table tbody tr td .table-td-content span {
+  font-size: 1em;
+  font-weight: 400;
+  color: rgb(var(--color-secondary));
+}
+main .admin-list-items-code-table tbody tr td .table-td-content span sub, main .admin-list-items-academy-table tbody tr td .table-td-content span sub, main .admin-list-items-users-table tbody tr td .table-td-content span sub, main .admin-list-items-quiz-table tbody tr td .table-td-content span sub {
+  font-size: 0.75em;
+  color: rgb(var(--color-accent));
+  font-weight: 600;
+  align-self: flex-end;
+  margin: 0 0.1em;
+}
+main .admin-list-items-code-table tbody tr td .table-td-content span sub select, main .admin-list-items-academy-table tbody tr td .table-td-content span sub select, main .admin-list-items-users-table tbody tr td .table-td-content span sub select, main .admin-list-items-quiz-table tbody tr td .table-td-content span sub select {
+  border: none;
+  width: 4ch;
+}
+main .admin-list-items-code-table tbody tr td .table-td-content [data-button=copy] svg,
+main .admin-list-items-code-table tbody tr td .table-td-content [data-button=edit] svg, main .admin-list-items-academy-table tbody tr td .table-td-content [data-button=copy] svg,
+main .admin-list-items-academy-table tbody tr td .table-td-content [data-button=edit] svg, main .admin-list-items-users-table tbody tr td .table-td-content [data-button=copy] svg,
+main .admin-list-items-users-table tbody tr td .table-td-content [data-button=edit] svg, main .admin-list-items-quiz-table tbody tr td .table-td-content [data-button=copy] svg,
+main .admin-list-items-quiz-table tbody tr td .table-td-content [data-button=edit] svg {
+  width: 1em;
+}
+main .admin-list-items-code-table tbody tr td .file-upload, main .admin-list-items-academy-table tbody tr td .file-upload, main .admin-list-items-users-table tbody tr td .file-upload, main .admin-list-items-quiz-table tbody tr td .file-upload {
+  width: 100%;
+  height: 100%;
+}
+main .admin-list-items-code-table tbody tr td .file-upload label, main .admin-list-items-academy-table tbody tr td .file-upload label, main .admin-list-items-users-table tbody tr td .file-upload label, main .admin-list-items-quiz-table tbody tr td .file-upload label {
+  width: 100%;
+  padding: 0.25em;
+  border: 0.1em dashed rgb(var(--color-accent));
+  border-radius: 0.5em;
+  background-color: transparent;
+  color: rgb(var(--color-accent));
+  font-size: 1.1em;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: background-color 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+main .admin-list-items-code-table tbody tr td .file-upload label:hover, main .admin-list-items-academy-table tbody tr td .file-upload label:hover, main .admin-list-items-users-table tbody tr td .file-upload label:hover, main .admin-list-items-quiz-table tbody tr td .file-upload label:hover {
+  background-color: rgba(var(--color-accent), 0.1);
+}
+main .admin-list-items-code-table tbody tr td .file-upload input[type=file], main .admin-list-items-academy-table tbody tr td .file-upload input[type=file], main .admin-list-items-users-table tbody tr td .file-upload input[type=file], main .admin-list-items-quiz-table tbody tr td .file-upload input[type=file] {
+  display: none;
+}
+main .admin-list-items-code-table tbody tr td .file-upload.over label, main .admin-list-items-academy-table tbody tr td .file-upload.over label, main .admin-list-items-users-table tbody tr td .file-upload.over label, main .admin-list-items-quiz-table tbody tr td .file-upload.over label {
+  border: 0.1em solid rgb(var(--color-accent));
+}
+main .admin-list-items-code-table tbody tr td .align-left, main .admin-list-items-academy-table tbody tr td .align-left, main .admin-list-items-users-table tbody tr td .align-left, main .admin-list-items-quiz-table tbody tr td .align-left {
+  justify-content: flex-start;
+  padding: 0 1em;
+}
+@media screen and (max-width: 768px) {
+  main .admin-list-items-code-table thead, main .admin-list-items-academy-table thead, main .admin-list-items-users-table thead, main .admin-list-items-quiz-table thead {
+    display: none;
+  }
+  main .admin-list-items-code-table tbody tr, main .admin-list-items-academy-table tbody tr, main .admin-list-items-users-table tbody tr, main .admin-list-items-quiz-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent !important;
+  }
+  main .admin-list-items-code-table tbody tr td, main .admin-list-items-academy-table tbody tr td, main .admin-list-items-users-table tbody tr td, main .admin-list-items-quiz-table tbody tr td {
+    width: 100%;
+    display: flex;
+  }
+  main .admin-list-items-code-table tbody tr td .table-td-content, main .admin-list-items-academy-table tbody tr td .table-td-content, main .admin-list-items-users-table tbody tr td .table-td-content, main .admin-list-items-quiz-table tbody tr td .table-td-content {
+    justify-content: flex-end;
+    text-align: right;
+  }
+  main .admin-list-items-code-table tbody tr td::before, main .admin-list-items-academy-table tbody tr td::before, main .admin-list-items-users-table tbody tr td::before, main .admin-list-items-quiz-table tbody tr td::before {
+    content: attr(data-label);
+  }
+  main .admin-list-items-code-table tbody tr td:nth-child(1), main .admin-list-items-academy-table tbody tr td:nth-child(1), main .admin-list-items-users-table tbody tr td:nth-child(1), main .admin-list-items-quiz-table tbody tr td:nth-child(1) {
+    text-align: right;
+    font-weight: 600;
+    border-bottom: 0.1em solid rgb(var(--color-accent));
+  }
+  main .admin-list-items-code-table tbody tr td:last-of-type .table-td-content, main .admin-list-items-academy-table tbody tr td:last-of-type .table-td-content, main .admin-list-items-users-table tbody tr td:last-of-type .table-td-content, main .admin-list-items-quiz-table tbody tr td:last-of-type .table-td-content {
+    justify-content: space-evenly;
+  }
+  main .admin-list-items-code-table tbody tr td#admin-list-items-academy-table-users-svg, main .admin-list-items-academy-table tbody tr td#admin-list-items-academy-table-users-svg, main .admin-list-items-users-table tbody tr td#admin-list-items-academy-table-users-svg, main .admin-list-items-quiz-table tbody tr td#admin-list-items-academy-table-users-svg {
+    display: none;
+  }
+}/*# sourceMappingURL=admin.css.map */

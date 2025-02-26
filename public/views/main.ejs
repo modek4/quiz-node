@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="<%= language %>">
+  <head>
+    <title><%=messages['title']%></title>
+    <base href="/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent" />
+    <meta name="theme-color" content="#00b6ed" />
+    <meta name="author" content="<%=messages['author']%>" />
+    <meta name="copyright" content="<%=messages['copyright']%>" />
+    <meta name="keywords" content="<%=messages['keywords']%>" />
+    <meta name="robots" content="nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="referrer" content="never" />
+    <meta http-equiv="expires" content="43200" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="<%=messages['site_name']%>" />
+    <meta name="title" content="<%=messages['title']%>" />
+    <meta property="og:title" content="<%=messages['title']%>" />
+    <meta property="twitter:title" content="<%=messages['title']%>" />
+    <meta itemprop="name" content="<%=messages['site_name']%>" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="<%=messages['site_url']%>" />
+    <meta property="twitter:url" content="<%=messages['site_url']%>" />
+    <meta property="image" content="<%=messages['site_banner']%>" />
+    <meta property="og:image" content="<%=messages['site_banner']%>" />
+    <meta property="twitter:image" content="<%=messages['site_banner']%>" />
+    <meta name="description" content="<%=messages['description']%>" />
+    <meta property="og:description" content="<%=messages['description']%>" />
+    <meta property="twitter:description" content="<%=messages['description']%>" />
+    <meta itemprop="description" content="<%=messages['description']%>" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="<%=messages['title']%>" />
+    <meta name="application-name" content="<%=messages['title']%>" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+    <link id="canonical" rel="canonical" href="<%=messages['site_url']%>" />
+    <meta name="browsermode" content="application" />
+    <link rel="preload" href="styles/main.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="preload" href="styles/quiz.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="stylesheet" type="text/css" href="styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="styles/quiz.css" />
+    <script defer type="module" src="scripts/quiz.js"></script>
+    <% if(role != 'user'){%>
+    <link rel="preload" href="styles/admin.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="stylesheet" type="text/css" href="styles/admin.css" />
+    <script defer type="module" src="scripts/admin.js"></script>
+    <% } %>
+    <script>
+      let settings = `<%- JSON.stringify(user.settings) %>`;
+    </script>
+  </head>
+  <body class="inter-regular <%- user.settings.darkmode ? 'darkmode' : '' %>">
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader-circle"></div>
+    </div>
+    <div class="novalid" aria-live="polite"></div>
+    <div id="content">
+      <h1 class="hidden-accessible"><%=messages['quiz_title']%></h1>
+      <aside class="navbar" aria-labelledby="navbar-header">
+        <footer role="contentinfo">
+          <p>&copy; <%=messages['footer']%></p>
+        </footer>
+        <div class="navbar-header">
+          <h2 id="navbar-header">Qu<span>¿</span>z</h2>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="navbar-close"
+            aria-label="<%=messages['navbar_close']%>"
+            role="button">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <ul class="navbar-items" aria-labelledby="navbar-items-main" role="list">
+          <li id="navbar-items-main" class="subtext"><%=messages['navbar_main']%></li>
+          <li
+            role="listitem"
+            class="navbar-items-home active"
+            aria-labelledby="navbar-items-home-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+            <span id="navbar-items-home-text"><%=messages['navbar_home']%></span>
+          </li>
+          <li
+            role="listitem"
+            class="navbar-items-quiz hidden-accessible"
+            aria-labelledby="navbar-items-quiz-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>
+            <span id="navbar-items-quiz-text"><%=messages['navbar_quiz']%></span>
+          </li>
+          <% if(role == 'admin' || role == 'moderator'){%>
+          <li role="listitem" class="navbar-items-admin" aria-labelledby="navbar-items-admin-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+            </svg>
+            <span id="navbar-items-admin-text"><%=messages['navbar_admin']%></span>
+          </li>
+          <li
+            role="listitem"
+            class="navbar-items-report"
+            aria-labelledby="navbar-items-report-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 3v1.5M3 21v-6m0 0 2.77-.693a9 9 0 0 1 6.208.682l.108.054a9 9 0 0 0 6.086.71l3.114-.732a48.524 48.524 0 0 1-.005-10.499l-3.11.732a9 9 0 0 1-6.085-.711l-.108-.054a9 9 0 0 0-6.208-.682L3 4.5M3 15V4.5" />
+            </svg>
+            <span id="navbar-items-report-text"><%=messages['navbar_report']%></span>
+          </li>
+          <% } %>
+          <li
+            role="listitem"
+            class="navbar-items-notifications"
+            aria-labelledby="navbar-items-notifications-text"
+            aria-live="polite"
+            aria-atomic="true">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+            </svg>
+            <span id="navbar-items-notifications-text"><%=messages['navbar_notifications']%></span>
+          </li>
+          <li
+            role="listitem"
+            class="navbar-items-scores"
+            aria-labelledby="navbar-items-scores-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
+            </svg>
+            <span id="navbar-items-scores-text"><%=messages['navbar_scores']%></span>
+          </li>
+        </ul>
+        <ul class="navbar-items" aria-labelledby="navbar-items-account" role="list">
+          <li id="navbar-items-account" class="subtext"><%=messages['navbar_account']%></li>
+          <li role="listitem" class="navbar-items-profile" aria-label="navbar-items-profile-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+            </svg>
+            <span id="navbar-items-profile-text"><%= user.name %></span>
+          </li>
+          <li
+            role="listitem"
+            class="navbar-items-logout"
+            aria-labelledby="navbar-items-logout-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+            </svg>
+            <span id="navbar-items-logout-text"><%=messages['navbar_logout']%></span>
+          </li>
+        </ul>
+      </aside>
+      <main role="main">
+        <header class="header">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="navbar-open"
+            aria-label="<%=messages['navbar_open']%>"
+            role="button">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <div class="search hidden-accessible" role="search">
+            <label id="search-input-label" for="search-input" class="hidden-accessible"
+              ><%=messages['search']%></label
+            >
+            <input
+              type="text"
+              placeholder="<%=messages['search_placeholder']%>"
+              class="search-input"
+              name="search-input"
+              id="search-input"
+              aria-labelledby="search-input-label"
+              aria-description="<%=messages['search_description']%>" />
+          </div>
+        </header>
+        <ul class="filters" role="list" aria-labelledby="filters-title">
+          <h2 id="filters-title" class="hidden-accessible"><%=messages['card_filters']%></h2>
+          <li
+            class="filters-grid display"
+            data-id="grid"
+            aria-label="<%=messages['filters_grid']%>">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 0 1-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125m-9.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0 1 12 18.375m9.75-12.75c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125m19.5 0v1.5c0 .621-.504 1.125-1.125 1.125M2.25 5.625v1.5c0 .621.504 1.125 1.125 1.125m0 0h17.25m-17.25 0h7.5c.621 0 1.125.504 1.125 1.125M3.375 8.25c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m17.25-3.75h-7.5c-.621 0-1.125.504-1.125 1.125m8.625-1.125c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M12 10.875v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125M13.125 12h7.5m-7.5 0c-.621 0-1.125.504-1.125 1.125M20.625 12c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h7.5M12 14.625v-1.5m0 1.5c0 .621-.504 1.125-1.125 1.125M12 14.625c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m0 1.5v-1.5m0 0c0-.621.504-1.125 1.125-1.125m0 0h7.5" />
+            </svg>
+          </li>
+          <li
+            class="filters-list display"
+            data-id="list"
+            aria-label="<%=messages['filters_list']%>">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+            </svg>
+          </li>
+          <li class="filters-asc sort" data-id="asc" aria-label="<%=messages['filters_asc']%>">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 4.5h14.25M3 9h9.75M3 13.5h9.75m4.5-4.5v12m0 0-3.75-3.75M17.25 21 21 17.25" />
+            </svg>
+          </li>
+          <li class="filters-desc sort" data-id="desc" aria-label="<%=messages['filters_desc']%>">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 4.5h14.25M3 9h9.75M3 13.5h5.25m5.25-.75L17.25 9m0 0L21 12.75M17.25 9v12" />
+            </svg>
+          </li>
+          <li class="filters-like sort" data-id="like" aria-label="<%=messages['filters_like']%>">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+            </svg>
+          </li>
+          <li
+            class="filters-recent sort"
+            data-id="recent"
+            aria-label="<%=messages['filters_recent']%>">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
+            </svg>
+          </li>
+          <li class="filters-academy select">
+            <% if(user.role == 'admin' && user.academy && user.academy.length > 1){ %>
+            <select id="filters-academy-select" aria-label="<%=messages['filters_academy']%>">
+              <% for(let i = 0; i < user.academy.length; i++){ %>
+              <option
+                value="<%= user.academy[i].academy_id %>"
+                aria-label="Academy: <%= user.academy[i].name %>">
+                <%= user.academy[i].name %>
+              </option>
+              <% } %>
+            </select>
+            <% } else { %>
+            <p
+              id="filters-academy-select"
+              aria-label="Academy: <%= user.academy[0].name %>"
+              data-id="<%= user.academy[0].academy_id %>">
+              <%= user.academy[0].name %>
+            </p>
+            <% } %>
+          </li>
+        </ul>
+        <h2 id="list-title" class="hidden-accessible"><%=messages['list_title']%></h2>
+        <section
+          class="list"
+          aria-labelledby="list-title"
+          aria-live="polite"
+          aria-atomic="true"></section>
+      </main>
+    </div>
+  </body>
+</html>

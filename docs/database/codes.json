@@ -1,0 +1,72 @@
+[
+  {
+    "_id": {
+      "$oid": "66af8d75c346c19951710660"
+    },
+    "code": "65LQRYB2",
+    "used": true,
+    "term": [1, 2, 3, 4, 5],
+    "academy_id": "66ab73cf01d7d7b41696466d",
+    "role": 2410,
+    "date": {
+      "$date": "2024-08-04T14:17:25.881Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "66af902753bcfd72e5259510"
+    },
+    "code": "8E5BHZHB",
+    "used": true,
+    "term": [1, 2, 3, 4],
+    "academy_id": "66ab73cf01d7d7b41696466d",
+    "role": 1201,
+    "date": {
+      "$date": "2024-08-04T14:28:55.240Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "66af90c0b75c56feabf9214e"
+    },
+    "code": "TZD9YINF",
+    "used": true,
+    "term": [1, 2, 3, 4, 5],
+    "academy_id": "66ab73cf01d7d7b41696466d",
+    "role": 4050,
+    "date": {
+      "$date": "2024-08-04T14:31:28.938Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "66af91c3b75c56feabf9218a"
+    },
+    "code": "HJHR85MF",
+    "used": false,
+    "term": [1, 2, 5],
+    "academy_id": "66ab73cf01d7d7b41696466d",
+    "role": 1201,
+    "date": {
+      "$date": "2024-08-04T14:35:47.121Z"
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "66af9b1fbd2ab7f25fe93883"
+    },
+    "code": "TJZ6KAUI",
+    "used": false,
+    "term": [2],
+    "academy_id": "66ab73cf01d7d7b41696466d",
+    "role": 1201,
+    "date": {
+      "$date": "2024-08-04T15:15:43.500Z"
+    },
+    "__v": 0
+  }
+]

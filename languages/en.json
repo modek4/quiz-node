@@ -1,0 +1,1561 @@
+{
+  "guest": {
+    "texts": {
+      "title": "Kacper Grodzki - Quiz",
+      "description": "Quiz site by Kacper Grodzki",
+      "keywords": "Quiz site",
+      "author": "Kacper Grodzki",
+      "copyright": "Copyright Kacper Grodzki",
+      "site_url": "https://localhost:3000/",
+      "site_banner": "http://localhost:3000/assets/banner.jpg",
+      "footer": "Kacper Grodzki",
+      "index_title_1": "All the most important",
+      "index_title_2": "quizzes",
+      "index_title_3": "in the best place!",
+      "signin": "Sign in",
+      "signup": "Sign up",
+      "forgot_password": "Forgot password?",
+      "remember_password": "Remember password?",
+      "change_password": "Change password",
+      "no_account": "Don't have an account?",
+      "have_account": "Already have an account?",
+      "loading": "Loading...",
+      "email": "Email",
+      "password": "Password",
+      "password_repeat": "Repeat password",
+      "password_new": "New password",
+      "password_new_repeat": "Repeat new password",
+      "password_current": "Current password",
+      "activation_code": "Activation code"
+    },
+    "errors": {
+      "unknown": {
+        "message": "Unknown error",
+        "description": "An unknown error occurred",
+        "status": 400
+      },
+      "bad_request": {
+        "message": "Bad request",
+        "description": "The server could not understand the request due to invalid syntax",
+        "status": 400
+      },
+      "insufficient_permissions": {
+        "message": "Insufficient permissions",
+        "description": "Insufficient permissions to perform the operation",
+        "status": 403
+      },
+      "no_data": {
+        "message": "No data",
+        "description": "No data found",
+        "status": 404
+      },
+      "internal": {
+        "message": "Internal server error",
+        "description": "An internal server error occurred",
+        "status": 500
+      },
+      "empty_email": {
+        "message": "Email is required",
+        "description": "Email is required",
+        "status": 400
+      },
+      "email_email": {
+        "message": "Email is incorrect",
+        "description": "Email is incorrect",
+        "status": 400
+      },
+      "min_email": {
+        "message": "Email is too short",
+        "description": "Email must be at least 6 characters long",
+        "status": 400
+      },
+      "max_email": {
+        "message": "Email is too long",
+        "description": "Email must be at most 255 characters long",
+        "status": 400
+      },
+      "wrong_email": {
+        "message": "Email is incorrect",
+        "description": "Email is incorrect",
+        "status": 404
+      },
+      "exist_email": {
+        "message": "Email is already taken",
+        "description": "Email is already taken",
+        "status": 409
+      },
+      "required_email": {
+        "message": "Email is required",
+        "description": "Email is required",
+        "status": 400
+      },
+      "old_new_email": {
+        "message": "Old and new email are the same",
+        "description": "Old and new email are the same",
+        "status": 400
+      },
+      "invalid_email": {
+        "message": "Email is invalid",
+        "description": "Email is invalid",
+        "status": 400
+      },
+      "user_blocked": {
+        "message": "User is blocked",
+        "description": "User is blocked",
+        "status": 403
+      },
+      "empty_data": {
+        "message": "Data is required",
+        "description": "Data is required",
+        "status": 400
+      },
+      "empty_name": {
+        "message": "Name is required",
+        "description": "Name is required",
+        "status": 400
+      },
+      "min_name": {
+        "message": "Name is too short",
+        "description": "Name must be at least 3 characters long",
+        "status": 400
+      },
+      "max_name": {
+        "message": "Name is too long",
+        "description": "Name must be at most 255 characters long",
+        "status": 400
+      },
+      "wrong_name": {
+        "message": "Name is incorrect",
+        "description": "Name is incorrect",
+        "status": 400
+      },
+      "empty_old_password": {
+        "message": "Old password is required",
+        "description": "Old password is required",
+        "status": 400
+      },
+      "min_old_password": {
+        "message": "Old password is too short",
+        "description": "Old password must be at least 8 characters long",
+        "status": 400
+      },
+      "max_old_password": {
+        "message": "Old password is too long",
+        "description": "Old password must be at most 255 characters long",
+        "status": 400
+      },
+      "wrong_old_password": {
+        "message": "Old password is incorrect",
+        "description": "Old password is incorrect",
+        "status": 400
+      },
+      "base_old_password": {
+        "message": "Old password is weak",
+        "description": "Old password must contain at least one lowercase letter, one uppercase letter, one digit and one special character",
+        "status": 400
+      },
+      "only_old_password": {
+        "message": "Old password is required",
+        "description": "Old password is required",
+        "status": 400
+      },
+      "empty_password": {
+        "message": "Password is required",
+        "description": "Password is required",
+        "status": 400
+      },
+      "min_password": {
+        "message": "Password is too short",
+        "description": "Password must be at least 8 characters long",
+        "status": 400
+      },
+      "max_password": {
+        "message": "Password is too long",
+        "description": "Password must be at most 255 characters long",
+        "status": 400
+      },
+      "wrong_password": {
+        "message": "Password is incorrect",
+        "description": "Password is incorrect",
+        "status": 400
+      },
+      "same_password": {
+        "message": "Password is not the same",
+        "description": "Password is not the same",
+        "status": 400
+      },
+      "old_new_password": {
+        "message": "Old and new password are the same",
+        "description": "Old and new password are the same",
+        "status": 400
+      },
+      "base_password": {
+        "message": "Password is weak",
+        "description": "Password must contain at least one lowercase letter, one uppercase letter, one digit and one special character",
+        "status": 400
+      },
+      "invalid_password": {
+        "message": "Password is invalid",
+        "description": "Password is invalid",
+        "status": 400
+      },
+      "only_repassword": {
+        "message": "Repeat password is required",
+        "description": "Repeat password is required",
+        "status": 400
+      },
+      "empty_code": {
+        "message": "Activation code is required",
+        "description": "Activation code is required",
+        "status": 400
+      },
+      "length_code": {
+        "message": "Activation code is incorrect",
+        "description": "Activation code must be 6 characters long",
+        "status": 400
+      },
+      "wrong_code": {
+        "message": "Activation code is incorrect",
+        "description": "Activation code is incorrect",
+        "status": 400
+      },
+      "unavailable_code": {
+        "message": "Activation code is unavailable",
+        "description": "Activation code is unavailable",
+        "status": 404
+      },
+      "not_found": {
+        "message": "Not found",
+        "description": "The requested resource could not be found but may be available in the future",
+        "status": 404
+      },
+      "user_not_found": {
+        "message": "User not found",
+        "description": "User not found in the database",
+        "status": 404
+      },
+      "user_not_updated": {
+        "message": "User settings not updated",
+        "description": "User settings not updated in the database",
+        "status": 500
+      },
+      "change_email_failed": {
+        "message": "Email change failed",
+        "description": "Email change failed in the database notifications",
+        "status": 500
+      },
+      "settings_not_found": {
+        "message": "Settings not found",
+        "description": "Settings not found in the database",
+        "status": 404
+      },
+      "canvas_not_found": {
+        "message": "Canvas not found",
+        "description": "Canvas not found in the DOM",
+        "status": 404
+      },
+      "preloader_not_found": {
+        "message": "Preloader not found",
+        "description": "Preloader not found in the DOM",
+        "status": 404
+      },
+      "signin_form_not_found": {
+        "message": "Login form not found",
+        "description": "Login form not found in the DOM",
+        "status": 404
+      },
+      "signup_form_not_found": {
+        "message": "Register form not found",
+        "description": "Register form not found in the DOM",
+        "status": 404
+      },
+      "forgot_password_form_not_found": {
+        "message": "Forgot password form not found",
+        "description": "Forgot password form not found in the DOM",
+        "status": 404
+      },
+      "buttons_form_not_found": {
+        "message": "Buttons for form not found",
+        "description": "Buttons for form not found in the DOM",
+        "status": 404
+      },
+      "code_updated_failed": {
+        "message": "Activation code update failed",
+        "description": "Activation code update failed",
+        "status": 500
+      },
+      "academy_count_updated_failed": {
+        "message": "Academy count update failed",
+        "description": "Academy count update failed",
+        "status": 500
+      },
+      "setting_created_failed": {
+        "message": "Setting creation failed",
+        "description": "Setting creation failed",
+        "status": 500
+      },
+      "user_created_failed": {
+        "message": "User creation failed",
+        "description": "User creation failed",
+        "status": 500
+      },
+      "user_reset_password_failed": {
+        "message": "Password reset failed",
+        "description": "Password reset failed",
+        "status": 500
+      },
+      "user_last_login_failed": {
+        "message": "Last login update failed",
+        "description": "Last login update failed",
+        "status": 500
+      }
+    },
+    "success": {
+      "unknown": "Unknown success",
+      "password_updated": "Your password has been updated",
+      "email_updated": "Your email has been updated"
+    },
+    "info": {
+      "loading": "Loading..."
+    }
+  },
+  "user": {
+    "texts": {
+      "quiz_title": "Kacper Grodzki Quiz",
+      "navbar_open": "Open navbar",
+      "navbar_close": "Close navbar",
+      "navbar_main": "Quiz",
+      "navbar_home": "Home",
+      "navbar_likes": "Likes",
+      "navbar_notifications": "Notifications",
+      "navbar_scores": "Scores",
+      "navbar_account": "Account",
+      "navbar_profile": "Profile",
+      "navbar_logout": "Logout",
+      "navbar_quiz": "Quiz",
+      "modal_cancel": "Cancel",
+      "modal_confirm": "Confirm",
+      "modal_delete": "Delete",
+      "modal_delete_text": "Are you sure you want to delete this item?",
+      "modal_edit": "Edit",
+      "modal_save": "Save",
+      "modal_close": "Close",
+      "modal_send": "Send",
+      "modal_notification_placeholder": "Type your message here...",
+      "modal_report": "Report",
+      "modal_report_text": "Are you sure you want to report this quiz?",
+      "modal_statistics_title": "Quiz name",
+      "modal_statistics_percentage": "Avg. score",
+      "quiz_question_count": "Number of questions",
+      "quiz_start_text": "Start quiz",
+      "search": "Search",
+      "search_placeholder": "Search...",
+      "search_no_results": "No results found",
+      "search_description": "Search results will appear below",
+      "list_title": "List of all quizzes",
+      "term": "Term",
+      "term_1": "First",
+      "term_2": "Second",
+      "term_3": "Third",
+      "term_4": "Fourth",
+      "term_5": "Fifth",
+      "term_6": "Sixth",
+      "term_7": "Seventh",
+      "term_8": "Eighth",
+      "term_9": "Ninth",
+      "term_10": "Tenth",
+      "term_11": "Eleventh",
+      "term_12": "Twelfth",
+      "term_13": "Thirteenth",
+      "term_14": "Fourteenth",
+      "card_filters": "Filters",
+      "filters_grid": "Grid",
+      "filters_list": "List",
+      "filters_asc": "Sort by ascending",
+      "filters_desc": "Sort by descending",
+      "filters_like": "Sort by like",
+      "filters_recent": "Sort by recent",
+      "filters_term": "Sort by term",
+      "filters_academy": "Academy",
+      "no_notifications": "No notifications",
+      "clear_notifications": "Mark all as read",
+      "account_title": "Account settings",
+      "account_password": "Change password",
+      "account_email": "Change email",
+      "account_email_label": "Current email",
+      "account_email_new_label": "New email",
+      "account_email_new_placeholder": "New email...",
+      "account_email_placeholder": "Email...",
+      "account_nickname": "Change nickname",
+      "account_nickname_label": "Current nickname",
+      "account_nickname_placeholder": "Nickname...",
+      "account_activation_code": "Your activation code",
+      "account_activation_code_label": "Your safe activation code",
+      "account_role": "Your role",
+      "account_random": "Randomize questions",
+      "account_autosave": "Autosave quizzes",
+      "account_explanation": "Show hints",
+      "account_open": "Open questions",
+      "account_darkmode": "Darkmode",
+      "account_livecheck": "Live check answers",
+      "quiz_this_image": "This image",
+      "quiz_this_audio": "This audio",
+      "quiz_this_video": "This video",
+      "quiz_confirm_answer": "Confirm answer",
+      "quiz_submit": "Submit quiz",
+      "browser_support": "Browser does not support this feature",
+      "manually_check": "Checked manually",
+      "scores_table_name_null": "Quiz deleted",
+      "scores_table_name": "Quiz name",
+      "scores_table_score": "Score",
+      "scores_table_score_tooltip": "The result may change due to open-ended questions",
+      "scores_table_date": "Date",
+      "scores_table_time": "Time",
+      "scores_table_avg": "Above average"
+    },
+    "errors": {
+      "not_found_user": {
+        "message": "Not found",
+        "description": "The requested resource could not be found but may be available in the future",
+        "status": 404
+      },
+      "invalid_type": {
+        "message": "Invalid type",
+        "description": "Invalid type",
+        "status": 400
+      },
+      "navbar_elements_not_found": {
+        "message": "Navbar elements not found",
+        "description": "Navbar elements not found in the DOM",
+        "status": 404
+      },
+      "filters_not_found": {
+        "message": "Filters not found",
+        "description": "Filters not found in the DOM",
+        "status": 404
+      },
+      "filter_id_missing": {
+        "message": "Filter id is missing",
+        "description": "Filter id is missing",
+        "status": 404
+      },
+      "filter_type_missing": {
+        "message": "Filter type is missing",
+        "description": "Filter type is missing",
+        "status": 404
+      },
+      "list_not_found": {
+        "message": "List not found",
+        "description": "List not found in the DOM",
+        "status": 404
+      },
+      "input_not_found": {
+        "message": "Input not found",
+        "description": "Input not found in the DOM",
+        "status": 404
+      },
+      "card_not_found": {
+        "message": "Card not found",
+        "description": "Card not found in the DOM",
+        "status": 404
+      },
+      "content_not_found": {
+        "message": "Content not found",
+        "description": "Content not found in the DOM",
+        "status": 404
+      },
+      "scores_not_found": {
+        "message": "Scores not found",
+        "description": "Scores not found in the database",
+        "status": 404
+      },
+      "main_not_found": {
+        "message": "Main not found",
+        "description": "Main not found in the DOM",
+        "status": 404
+      },
+      "modal_not_found": {
+        "message": "Modal not found",
+        "description": "Modal not found in the DOM",
+        "status": 404
+      },
+      "modal_not_type_found": {
+        "message": "Modal type not found",
+        "description": "Modal type not found in the DOM",
+        "status": 404
+      },
+      "modal_not_table_found": {
+        "message": "Modal table not found",
+        "description": "Modal table not found in the DOM",
+        "status": 404
+      },
+      "modal_not_id_found": {
+        "message": "Modal id not found",
+        "description": "Modal id not found in the DOM",
+        "status": 404
+      },
+      "term_invalid": {
+        "message": "Term is invalid",
+        "description": "Term is invalid",
+        "status": 400
+      },
+      "no_notification": {
+        "message": "No notifications",
+        "description": "No notifications found in the database",
+        "status": 404
+      },
+      "notification_not_found": {
+        "message": "Notification not found",
+        "description": "Notification not found in the database",
+        "status": 404
+      },
+      "read_notification_failed": {
+        "message": "Read notification failed",
+        "description": "Read notification failed",
+        "status": 500
+      },
+      "read_notifications_failed": {
+        "message": "Read all notifications failed",
+        "description": "Read all notifications failed",
+        "status": 500
+      },
+      "delete_notification_failed": {
+        "message": "Delete notification failed",
+        "description": "Delete notification failed",
+        "status": 500
+      },
+      "notification_list_not_found": {
+        "message": "Notification list not found",
+        "description": "Notification list not found in the DOM",
+        "status": 404
+      },
+      "quiz_not_found": {
+        "message": "Quiz not found",
+        "description": "Quiz not found in the database",
+        "status": 404
+      },
+      "quiz_id_not_found": {
+        "message": "Quiz id is missing",
+        "description": "Quiz id is missing in the DOM",
+        "status": 404
+      },
+      "quiz_score_not_found": {
+        "message": "Quiz score not found",
+        "description": "Quiz score not found in the DOM",
+        "status": 404
+      },
+      "quiz_time_not_found": {
+        "message": "Quiz time not found",
+        "description": "Quiz time not found in the DOM",
+        "status": 404
+      },
+      "quiz_question_count": {
+        "message": "Not enough questions",
+        "description": "Quiz question count is invalid (at least 2)",
+        "status": 400
+      },
+      "questions_not_found": {
+        "message": "Questions not found",
+        "description": "Questions not found in the DOM",
+        "status": 404
+      },
+      "question_id_not_found": {
+        "message": "Question id not found",
+        "description": "Question id not found in the DOM",
+        "status": 404
+      },
+      "quiz_score_mismatch": {
+        "message": "Score mismatch",
+        "description": "Score mismatch in the questions and answers",
+        "status": 400
+      },
+      "score_create_failed": {
+        "message": "Score creation failed",
+        "description": "Score creation failed in the database",
+        "status": 500
+      },
+      "score_attempts_failed": {
+        "message": "Score attempts failed",
+        "description": "Score attempts failed in the database",
+        "status": 500
+      },
+      "quiz_answers_not_found": {
+        "message": "Answers not found",
+        "description": "Answers not found in the DOM",
+        "status": 404
+      },
+      "quiz_answer_not_found": {
+        "message": "Answer not found",
+        "description": "Answer not found in the DOM",
+        "status": 404
+      },
+      "quiz_answers_left": {
+        "message": "Answers left",
+        "description": "Answers left in the quiz",
+        "status": 400
+      },
+      "quiz_submit_not_found": {
+        "message": "Submit quiz not found",
+        "description": "Submit quiz not found in the DOM",
+        "status": 404
+      },
+      "question_not_found": {
+        "message": "Question not found",
+        "description": "Question not found in the database",
+        "status": 404
+      },
+      "question_report_failed": {
+        "message": "Question report failed",
+        "description": "Question report status change failed",
+        "status": 500
+      },
+      "question_already_reported": {
+        "message": "Question already reported",
+        "description": "Question already reported by the user",
+        "status": 400
+      },
+      "reports_not_found": {
+        "message": "No reports",
+        "description": "Reports not found in the database",
+        "status": 404
+      },
+      "academy_select_not_found": {
+        "message": "Academy select not found",
+        "description": "Academy select not found in the DOM",
+        "status": 404
+      },
+      "academy_id_missing": {
+        "message": "Academy id is missing",
+        "description": "Academy id is missing",
+        "status": 404
+      },
+      "nickname_form_not_found": {
+        "message": "Nickname form not found",
+        "description": "Nickname form not found in the DOM",
+        "status": 404
+      },
+      "same_nickname": {
+        "message": "Nickname is the same as the current one",
+        "description": "Nickname is the same as the current one",
+        "status": 400
+      },
+      "change_password_form_not_found": {
+        "message": "Change password form not found",
+        "description": "Change password form not found in the DOM",
+        "status": 404
+      },
+      "change_email_form_not_found": {
+        "message": "Change email form not found",
+        "description": "Change email form not found in the DOM",
+        "status": 404
+      },
+      "toggle_inputs_not_found": {
+        "message": "Toggle inputs not found",
+        "description": "Toggle inputs not found in the DOM",
+        "status": 404
+      },
+      "toggle_inputs_timeout": {
+        "message": "Slow down",
+        "description": "Toggle inputs timeout (slow down)",
+        "status": 500
+      },
+      "activation_code_copy_failed": {
+        "message": "Activation code copy failed",
+        "description": "Activation code copy failed",
+        "status": 500
+      },
+      "activation_code_copy_button_not_found": {
+        "message": "Activation code copy button not found",
+        "description": "Activation code copy button not found in the DOM",
+        "status": 404
+      },
+      "scores_table_not_found": {
+        "message": "Scores table not found",
+        "description": "Scores table not found in the DOM",
+        "status": 404
+      },
+      "send_notification_failed": {
+        "message": "Send notification failed",
+        "description": "Send notification failed for the user",
+        "status": 500
+      }
+    },
+    "success": {
+      "logged_in_user": "Successfully logged in as user",
+      "read_notification": "Notification read",
+      "read_notifications": "All notifications read",
+      "delete_notification": "Read notifications removed",
+      "user_updated": "User settings updated",
+      "changed_settings": "Your settings have been changed successfully",
+      "nickname_updated": "Nickname updated",
+      "nickname_updated_notification": "Your nickname has been updated",
+      "password_updated_notification": "Your password has been changed",
+      "email_updated_notification": "Your email has been updated",
+      "activation_code_copied": "Activation code copied successfully",
+      "question_reported": "Question reported successfully",
+      "question_reported_notification": "Question reported successfully",
+      "quiz_finished": "You have finished the quiz with a score of"
+    },
+    "info": {
+      "info_user": "User information"
+    }
+  },
+  "admin": {
+    "texts": {
+      "navbar_admin": "Panel",
+      "navbar_report": "Reports",
+      "quiz_list_title": "Quizzes",
+      "quiz_table_title": "Quiz name",
+      "quiz_table_title_placeholder": "Name of the quiz...",
+      "quiz_table_terms": "Terms",
+      "quiz_table_academy": "Academy",
+      "quiz_table_select_academy": "Select academy",
+      "quiz_table_file": "Questions file",
+      "quiz_table_file_drop": "Upload file here",
+      "quiz_table_count": "Questions count",
+      "quiz_table_questions": "Questions",
+      "quiz_table_actions": "Actions",
+      "quiz_delete_text": "Are you sure you want to delete this quiz?",
+      "activation_codes_title": "Activation codes",
+      "activation_codes_table_code": "Code",
+      "activation_codes_table_code_copy": "Copy",
+      "activation_codes_table_terms": "Terms",
+      "activation_codes_table_terms_edit": "Edit terms",
+      "activation_codes_table_role": "Role",
+      "activation_codes_table_role_edit": "Edit role",
+      "activation_codes_table_academy": "Academy",
+      "activation_codes_table_academy_edit": "Edit academy",
+      "activation_codes_table_actions": "Actions",
+      "activation_codes_table_amount": "Amount",
+      "activation_codes_table_select_role": "Select role",
+      "activation_codes_table_role__user": "User",
+      "activation_codes_table_role__moderator": "Moderator",
+      "activation_codes_table_select_academy": "Select academy",
+      "activation_codes_delete_text": "Are you sure you want to delete this activation code?",
+      "academies_title": "Academies",
+      "academies_table_academy": "Academy",
+      "academies_table_academy_placeholder": "Full academy name...",
+      "academies_table_academy_edit": "Edit academy",
+      "academies_table_academy_code": "Academy code",
+      "academies_table_academy_code_edit": "Edit academy code",
+      "academies_table_users": "Users",
+      "academies_table_academy_actions": "Actions",
+      "academies_delete_text": "Are you sure you want to delete this academy?",
+      "academies_users": "Users",
+      "users_table_login": "Last login",
+      "users_table_emails": "Emails",
+      "users_table_code": "Code",
+      "users_table_terms": "Terms",
+      "users_table_actions": "Actions",
+      "actions_add": "Add",
+      "actions_add_question": "Add question",
+      "actions_update": "Update",
+      "actions_see": "See",
+      "actions_public": "Public",
+      "actions_delete": "Delete",
+      "actions_decline": "Decline",
+      "actions_edit": "Edit",
+      "actions_info": "Info",
+      "actions_correct": "Correct",
+      "actions_incorrect": "Incorrect",
+      "actions_generate": "Generate",
+      "user_role": "User",
+      "moderator_role": "Moderator",
+      "admin_role": "Admin",
+      "report_no_reports": "No reports",
+      "report_no_reports_description": "No reports found in the database",
+      "report_no_questions": "No questions",
+      "report_no_questions_description": "No questions found in the database",
+      "quiz_info_title": "How to format a quiz file?",
+      "quiz_info_text": "The quiz file must be in the .txt or .md format and must be encoded in UTF-8.",
+      "quiz_info_1": "Questions are added in Markdown format",
+      "quiz_info_2": "This is how we add answers",
+      "quiz_info_3": "And this is how we mark the correct one",
+      "quiz_info_4": "This is how we add explanations to questions",
+      "quiz_info_5": "You can add code to the questions",
+      "quiz_info_6": "You can add code to a question like this",
+      "quiz_info_7": "Or to a correct answer",
+      "quiz_info_8": "Or like this to an incorrect one",
+      "quiz_info_9": "You can add images, audio, or video to your questions",
+      "quiz_info_10": "You can add images in a question or an answer",
+      "quiz_info_11": "Similarly, audio files in formats like",
+      "quiz_info_12": "Or video files in formats like",
+      "quiz_info_13": "You can add an open-ended question like this",
+      "quiz_info_14": "Here's an example of a correct answer",
+      "quiz_info_file_title": "Example of a quiz file",
+      "quiz_info_file_1": "What is the result of 3 + 5?",
+      "quiz_info_file_2": "7",
+      "quiz_info_file_3": "8",
+      "quiz_info_file_4": "9",
+      "quiz_info_file_5": "10",
+      "quiz_info_file_6": "Adding 3 to 5 gives 8 (I think) as the sum of those numbers",
+      "quiz_info_file_7": "Which of the following are programming languages?",
+      "quiz_info_file_8": "Python",
+      "quiz_info_file_9": "JavaScript",
+      "quiz_info_file_10": "C++",
+      "quiz_info_file_11": "HTML",
+      "quiz_info_file_12": "What will this code display?",
+      "quiz_info_file_13": "Example code",
+      "quiz_info_file_14": "First level heading",
+      "quiz_info_file_15": "Third level heading",
+      "quiz_info_file_16": "Text without formatting",
+      "quiz_info_file_17": "A first level heading is created - the text will be displayed in a larger and bold font",
+      "quiz_info_file_18": "How do I display the message \"Hello, World!\" in JavaScript?",
+      "quiz_info_file_19": "This is the correct JavaScript syntax for displaying text in the console because that's what the documentation says",
+      "quiz_info_file_20": "What do you hear in the recording?",
+      "quiz_info_file_21": "Describe your day, your first day in prison",
+      "quiz_info_file_22": "I never wanted to end up here"
+    },
+    "errors": {
+      "not_found_admin": {
+        "message": "Not found",
+        "description": "The requested resource could not be found but may be available in the future",
+        "status": 404
+      },
+      "failed_to_fold": {
+        "message": "Failed to fold",
+        "description": "Failed to fold element in the DOM",
+        "status": 500
+      },
+      "fold_button_not_found": {
+        "message": "Fold button not found",
+        "description": "Fold button not found in the DOM",
+        "status": 404
+      },
+      "empty_code": {
+        "message": "Code name is required",
+        "description": "Code name is required",
+        "status": 400
+      },
+      "empty_name": {
+        "message": "Name is required",
+        "description": "Name is required",
+        "status": 400
+      },
+      "required_name": {
+        "message": "Name is required",
+        "description": "Name is required",
+        "status": 400
+      },
+      "required_code": {
+        "message": "Code is required",
+        "description": "Code is required",
+        "status": 400
+      },
+      "required_term": {
+        "message": "Terms are required",
+        "description": "Terms are required",
+        "status": 400
+      },
+      "required_role": {
+        "message": "Role is required",
+        "description": "Role is required",
+        "status": 400
+      },
+      "required_academy_id": {
+        "message": "Academy is required",
+        "description": "Academy is required",
+        "status": 400
+      },
+      "required_amount": {
+        "message": "Amount is required",
+        "description": "Amount is required",
+        "status": 400
+      },
+      "min_amount": {
+        "message": "Amount is too low",
+        "description": "Amount must be at least 1",
+        "status": 400
+      },
+      "max_amount": {
+        "message": "Amount is too high",
+        "description": "Amount must be at most 100",
+        "status": 400
+      },
+      "integer_amount": {
+        "message": "Amount is not an integer",
+        "description": "Amount must be an integer",
+        "status": 400
+      },
+      "base_amount": {
+        "message": "Amount value isn't ok",
+        "description": "Amount value must be at least 1 characters long",
+        "status": 400
+      },
+      "base_term": {
+        "message": "Terms value isn't ok",
+        "description": "Terms value must be at least 1 characters long",
+        "status": 400
+      },
+      "min_term": {
+        "message": "Terms is too short",
+        "description": "Terms must be at least 1 characters long",
+        "status": 400
+      },
+      "max_term": {
+        "message": "Terms is too long",
+        "description": "Terms must be at most 255 characters long",
+        "status": 400
+      },
+      "array_terms": {
+        "message": "Terms is not valid",
+        "description": "Terms must be an array of strings, use comma to separate",
+        "status": 400
+      },
+      "base_role": {
+        "message": "Role value isn't ok",
+        "description": "Role value must be at least 1 characters long",
+        "status": 400
+      },
+      "min_role": {
+        "message": "Role is too short",
+        "description": "Role must be at least 1 characters long",
+        "status": 400
+      },
+      "max_role": {
+        "message": "Role is too long",
+        "description": "Role must be at most 255 characters long",
+        "status": 400
+      },
+      "wrong_role": {
+        "message": "Role is incorrect",
+        "description": "Role is incorrect (user or moderator)",
+        "status": 400
+      },
+      "min_code": {
+        "message": "Code name is too short",
+        "description": "Code name must be at least 2 characters long",
+        "status": 400
+      },
+      "max_code": {
+        "message": "Code name is too long",
+        "description": "Code name must be at most 16 characters long",
+        "status": 400
+      },
+      "min_name": {
+        "message": "Name is too short",
+        "description": "Name must be at least 6 characters long",
+        "status": 400
+      },
+      "max_name": {
+        "message": "Name is too long",
+        "description": "Name must be at most 255 characters long",
+        "status": 400
+      },
+      "alphanum_name": {
+        "message": "Name contains special characters",
+        "description": "Name must contain only alphanumeric characters",
+        "status": 400
+      },
+      "alphanum_code": {
+        "message": "Code name contains special characters",
+        "description": "Code name must contain only alphanumeric characters",
+        "status": 400
+      },
+      "empty_content": {
+        "message": "Content is required",
+        "description": "Content is required",
+        "status": 400
+      },
+      "min_content": {
+        "message": "Content is too short",
+        "description": "Content must be at least 1 character long",
+        "status": 400
+      },
+      "max_content": {
+        "message": "Content is too long",
+        "description": "Content must be at most 1024 characters long",
+        "status": 400
+      },
+      "base_content": {
+        "message": "Content value isn't ok",
+        "description": "Content value must be at least 1 character long",
+        "status": 400
+      },
+      "required_content": {
+        "message": "Content is required",
+        "description": "Content is required",
+        "status": 400
+      },
+      "quiz_values_required": {
+        "message": "All quiz values required",
+        "description": "All quiz values required (name, terms, academy, file)",
+        "status": 400
+      },
+      "quiz_file_not_found": {
+        "message": "Questions file not found",
+        "description": "Questions file failed to upload",
+        "status": 404
+      },
+      "quiz_table_not_found": {
+        "message": "Quiz table not found",
+        "description": "Quiz table not found in the DOM",
+        "status": 404
+      },
+      "quiz_file_type": {
+        "message": "File type not allowed (txt or md)",
+        "description": "Questions file type not allowed (txt or md)",
+        "status": 400
+      },
+      "quiz_file_size": {
+        "message": "File is too large (max 1MB)",
+        "description": "Questions file is too large (max 1MB)",
+        "status": 400
+      },
+      "quiz_invalid_data": {
+        "message": "Quiz data is invalid",
+        "description": "Quiz data is invalid",
+        "status": 400
+      },
+      "quiz_name_exists": {
+        "message": "Quiz name already exists",
+        "description": "Quiz with given name already exists",
+        "status": 409
+      },
+      "quiz_parse_heading_not_found": {
+        "message": "Quiz parse question not found",
+        "description": "Quiz parse heading not found in the MD file (##)",
+        "status": 404
+      },
+      "quiz_parse_answers_not_found": {
+        "message": "Quiz parse answers not found",
+        "description": "Quiz parse answers not found in the MD file (no list)",
+        "status": 404
+      },
+      "quiz_parse_answer_empty": {
+        "message": "Quiz parse answer empty",
+        "description": "Quiz parse answer empty in the MD file (empty list item)",
+        "status": 404
+      },
+      "quiz_parse_question_not_found": {
+        "message": "Quiz parse answers without question not found",
+        "description": "Quiz parse answers without question not found in the MD file",
+        "status": 404
+      },
+      "quiz_parse_media_link_not_found": {
+        "message": "Quiz parse media link not found",
+        "description": "Quiz parse media link not found in the MD file (no link)",
+        "status": 404
+      },
+      "quiz_question_required": {
+        "message": "Question required",
+        "description": "Question required in the MD file",
+        "status": 404
+      },
+      "quiz_question_invalid_format": {
+        "message": "Question invalid format",
+        "description": "Question invalid format in the MD file (no heading)",
+        "status": 400
+      },
+      "quiz_questions_delete_failed": {
+        "message": "Questions delete failed",
+        "description": "Questions delete failed in the database",
+        "status": 500
+      },
+      "quiz_likes_delete_failed": {
+        "message": "Likes delete failed",
+        "description": "Likes delete failed in the database",
+        "status": 500
+      },
+      "quiz_no_questions": {
+        "message": "Quiz no questions",
+        "description": "Quiz no questions found in the MD file",
+        "status": 404
+      },
+      "quiz_question_heading": {
+        "message": "Question has wrong heading",
+        "description": "Question heading not found in the MD file (#)",
+        "status": 404
+      },
+      "quiz_answer_heading": {
+        "message": "Answer has wrong heading",
+        "description": "Quiz answer heading not found in the MD file (##)",
+        "status": 404
+      },
+      "quiz_question_length": {
+        "message": "Question is too long or too short",
+        "description": "Question is too long or too short in the MD file",
+        "status": 400
+      },
+      "quiz_explanation_invalid_format": {
+        "message": "Explanation invalid format",
+        "description": "Explanation invalid format in the MD file (no heading)",
+        "status": 400
+      },
+      "quiz_explanation_length": {
+        "message": "Explanation is too long or too short",
+        "description": "Explanation is too long or too short in the MD file (min 2, max 4096)",
+        "status": 400
+      },
+      "quiz_answers_invalid_format": {
+        "message": "Answers invalid format",
+        "description": "Answers invalid format in the MD file (no list)",
+        "status": 400
+      },
+      "quiz_answers_required": {
+        "message": "Answers required",
+        "description": "Answers required in the MD file at least two for multiple choice",
+        "status": 404
+      },
+      "quiz_answer_required": {
+        "message": "Answer content required",
+        "description": "Answer text content required in the MD file",
+        "status": 404
+      },
+      "quiz_answer_length": {
+        "message": "Answer is too long or too short",
+        "description": "Answer is too long or too short in the MD file",
+        "status": 400
+      },
+      "quiz_open_answer_length": {
+        "message": "Open answer is too long or too short",
+        "description": "Open answer is too long or too short in the MD file",
+        "status": 400
+      },
+      "quiz_duplicate_answers": {
+        "message": "Duplicate answers",
+        "description": "Duplicate answers in the MD file are not allowed in the same question",
+        "status": 400
+      },
+      "quiz_correct_answer_required": {
+        "message": "Correct answer required",
+        "description": "Correct answer required in the MD file",
+        "status": 404
+      },
+      "quiz_options_content_required": {
+        "message": "Quiz options content required",
+        "description": "Quiz options content required in the MD file if you have options",
+        "status": 404
+      },
+      "quiz_answer_options_content_required": {
+        "message": "Quiz answer options content required",
+        "description": "Quiz answer options content required in the MD file if you have options in the answer",
+        "status": 404
+      },
+      "quiz_open_options_required": {
+        "message": "Quiz open options required",
+        "description": "Quiz open options required in the MD file with open question",
+        "status": 404
+      },
+      "quiz_open_answer_required": {
+        "message": "Quiz open question answer required",
+        "description": "Quiz open question answer required in the MD file at least one",
+        "status": 404
+      },
+      "quiz_open_answer_single": {
+        "message": "Quiz open question answer single",
+        "description": "Quiz open question answer single in the MD file",
+        "status": 400
+      },
+      "quiz_drop_over_not_found": {
+        "message": "Quiz drop over not found",
+        "description": "Quiz drop over not found in the DOM",
+        "status": 404
+      },
+      "quiz_select_not_found": {
+        "message": "Quiz select not found",
+        "description": "Quiz select not found in the DOM",
+        "status": 404
+      },
+      "quiz_add_button_not_found": {
+        "message": "Quiz add button not found",
+        "description": "Quiz add button not found in the DOM",
+        "status": 404
+      },
+      "quiz_info_button_not_found": {
+        "message": "Quiz info button not found",
+        "description": "Quiz info button not found in the DOM",
+        "status": 404
+      },
+      "quiz_add_failed": {
+        "message": "Quiz add failed",
+        "description": "Quiz add failed in the database",
+        "status": 500
+      },
+      "quiz_publish_failed": {
+        "message": "Quiz publish failed",
+        "description": "Quiz publish change failed in the database",
+        "status": 500
+      },
+      "quiz_modify_button_not_found": {
+        "message": "Quiz modify button not found",
+        "description": "Quiz modify button not found in the DOM",
+        "status": 404
+      },
+      "question_button_not_found": {
+        "message": "Question button not found",
+        "description": "Question button not found in the DOM",
+        "status": 404
+      },
+      "question_add_button_not_found": {
+        "message": "Question add button not found",
+        "description": "Question add button not found in the DOM",
+        "status": 404
+      },
+      "question_edit_button_not_found": {
+        "message": "Question edit button not found",
+        "description": "Question edit button not found in the DOM",
+        "status": 404
+      },
+      "question_delete_button_not_found": {
+        "message": "Question delete button not found",
+        "description": "Question delete button not found in the DOM",
+        "status": 404
+      },
+      "question_decline_button_not_found": {
+        "message": "Question decline button not found",
+        "description": "Question decline button not found in the DOM",
+        "status": 404
+      },
+      "question_open_button_not_found": {
+        "message": "Question open button not found",
+        "description": "Question open button not found in the DOM",
+        "status": 404
+      },
+      "question_update_failed": {
+        "message": "Question update failed",
+        "description": "Question update failed in the database",
+        "status": 500
+      },
+      "question_add_failed": {
+        "message": "Question add failed",
+        "description": "Question add failed in the database",
+        "status": 500
+      },
+      "question_delete_failed": {
+        "message": "Question delete failed",
+        "description": "Question delete failed in the database",
+        "status": 500
+      },
+      "question_decline_failed": {
+        "message": "Question decline failed",
+        "description": "Question decline failed in the database",
+        "status": 500
+      },
+      "quiz_public_button_not_found": {
+        "message": "Quiz public button not found",
+        "description": "Quiz public button not found in the DOM",
+        "status": 404
+      },
+      "quiz_delete_button_not_found": {
+        "message": "Quiz delete button not found",
+        "description": "Quiz delete button not found in the DOM",
+        "status": 404
+      },
+      "quiz_list_item_failed": {
+        "message": "Quiz list item failed",
+        "description": "Quiz list item failed",
+        "status": 500
+      },
+      "questions_list_item_failed": {
+        "message": "Questions list item failed",
+        "description": "Questions list item failed in database",
+        "status": 500
+      },
+      "no_open_questions": {
+        "message": "No open questions",
+        "description": "No open questions found in the database",
+        "status": 404
+      },
+      "quiz_create_failed": {
+        "message": "Quiz create failed",
+        "description": "Quiz create failed in the database",
+        "status": 500
+      },
+      "quiz_questions_create_failed": {
+        "message": "Quiz questions create failed",
+        "description": "Quiz questions create failed in the database",
+        "status": 500
+      },
+      "quiz_modify_exist": {
+        "message": "Quiz name already exists",
+        "description": "Quiz with given name already exists",
+        "status": 409
+      },
+      "quiz_modify_failed": {
+        "message": "Quiz modify failed",
+        "description": "Quiz modify failed in the database",
+        "status": 500
+      },
+      "quiz_modify_data_not_found": {
+        "message": "Quiz modify data not found",
+        "description": "Quiz modify data not found in the DOM",
+        "status": 404
+      },
+      "academy_special_characters": {
+        "message": "Academy values contains special characters",
+        "description": "Academy values must not contain special characters",
+        "status": 400
+      },
+      "academy_load_not_found": {
+        "message": "Academies not found",
+        "description": "Academies not found in the DOM",
+        "status": 404
+      },
+      "academy_table_not_found": {
+        "message": "Academy table not found",
+        "description": "Academy table not found in the DOM",
+        "status": 404
+      },
+      "academy_list_failed": {
+        "message": "Academy list failed",
+        "description": "Academy list failed",
+        "status": 500
+      },
+      "academy_list_item_failed": {
+        "message": "Academy list item failed",
+        "description": "Academy list item failed",
+        "status": 500
+      },
+      "academy_add_failed": {
+        "message": "Academy add failed",
+        "description": "Academy add failed",
+        "status": 500
+      },
+      "academy_modify_failed": {
+        "message": "Academy modify failed",
+        "description": "Academy modify failed",
+        "status": 500
+      },
+      "academy_not_exist": {
+        "message": "Academy does not exist",
+        "description": "Academy does not exist",
+        "status": 404
+      },
+      "academy_not_found": {
+        "message": "Academy not found",
+        "description": "Academy not found",
+        "status": 404
+      },
+      "academy_exist": {
+        "message": "Academy already exists",
+        "description": "Academy with given name already exists",
+        "status": 409
+      },
+      "academy_modify_exist": {
+        "message": "Academy name or code already exists",
+        "description": "Academy with given name or code already exists",
+        "status": 409
+      },
+      "academy_has_users": {
+        "message": "Academy has users",
+        "description": "Academy has users, cannot be deleted",
+        "status": 409
+      },
+      "academy_delete_button_not_found": {
+        "message": "Academy delete button not found",
+        "description": "Academy delete button not found in the DOM",
+        "status": 404
+      },
+      "academy_add_button_not_found": {
+        "message": "Academy add button not found",
+        "description": "Academy add button not found in the DOM",
+        "status": 404
+      },
+      "academy_modify_button_not_found": {
+        "message": "Academy modify button not found",
+        "description": "Academy modify button not found in the DOM",
+        "status": 404
+      },
+      "academy_modify_data_not_found": {
+        "message": "Academy modify data not found",
+        "description": "Academy modify data not found in the DOM",
+        "status": 404
+      },
+      "term_modify_data_not_found": {
+        "message": "Term modify data not found",
+        "description": "Term modify data not found in the DOM",
+        "status": 404
+      },
+      "term_modify_button_not_found": {
+        "message": "Term modify button not found",
+        "description": "Term modify button not found in the DOM",
+        "status": 404
+      },
+      "term_list_item_failed": {
+        "message": "Term list item failed",
+        "description": "Term list item failed",
+        "status": 500
+      },
+      "term_modify_failed": {
+        "message": "Term modify failed",
+        "description": "Term modify failed",
+        "status": 500
+      },
+      "term_modify_permission": {
+        "message": "Term modify permission",
+        "description": "You cannot modify term for that user",
+        "status": 403
+      },
+      "codes_delete_failed": {
+        "message": "Activation codes delete failed",
+        "description": "Activation codes delete failed",
+        "status": 500
+      },
+      "activation_code_not_found": {
+        "message": "Activation code not found",
+        "description": "Activation code not found",
+        "status": 404
+      },
+      "activation_code_values_required": {
+        "message": "All activation code values required",
+        "description": "All activation code values required (amount, terms, role, academy)",
+        "status": 404
+      },
+      "activation_code_table_not_found": {
+        "message": "Activation code table not found",
+        "description": "Activation code table not found in the DOM",
+        "status": 404
+      },
+      "activation_code_list_failed": {
+        "message": "Activation code list failed",
+        "description": "Activation code list failed",
+        "status": 500
+      },
+      "activation_code_add_button_not_found": {
+        "message": "Activation code add button not found",
+        "description": "Activation code add button not found in the DOM",
+        "status": 404
+      },
+      "activation_code_delete_button_not_found": {
+        "message": "Activation code delete button not found",
+        "description": "Activation code delete button not found in the DOM",
+        "status": 404
+      },
+      "activation_code_modify_button_not_found": {
+        "message": "Activation code modify button not found",
+        "description": "Activation code modify button not found in the DOM",
+        "status": 404
+      },
+      "activation_code_create_failed": {
+        "message": "Activation code create failed",
+        "description": "Activation code create failed",
+        "status": 500
+      },
+      "activation_code_delete_failed": {
+        "message": "Activation code delete failed",
+        "description": "Activation code delete failed",
+        "status": 500
+      },
+      "activation_code_modify_failed": {
+        "message": "Activation code modify failed",
+        "description": "Activation code modify failed",
+        "status": 500
+      },
+      "activation_code_generate_failed": {
+        "message": "Activation code generate failed",
+        "description": "Activation code generate failed",
+        "status": 500
+      },
+      "activation_code_add_failed": {
+        "message": "Activation code add failed",
+        "description": "Activation code add failed",
+        "status": 500
+      },
+      "users_table_not_found": {
+        "message": "Users table not found",
+        "description": "Users table not found in the DOM",
+        "status": 404
+      },
+      "users_table_role_not_found": {
+        "message": "Users select role not found",
+        "description": "Users select role not found in the DOM",
+        "status": 404
+      },
+      "users_not_found": {
+        "message": "Users not found",
+        "description": "Users not found in the database",
+        "status": 404
+      },
+      "user_role_failed": {
+        "message": "User role change failed",
+        "description": "User role change failed in the database",
+        "status": 500
+      },
+      "user_role_admin_failed": {
+        "message": "User role change failed",
+        "description": "You cannot change role to admin",
+        "status": 403
+      },
+      "users_info_button_not_found": {
+        "message": "Users info button not found",
+        "description": "Users info button not found in the DOM",
+        "status": 404
+      },
+      "codes_not_found": {
+        "message": "Codes not found",
+        "description": "Codes not found in the database",
+        "status": 404
+      },
+      "user_block_failed": {
+        "message": "User block failed",
+        "description": "User block failed",
+        "status": 500
+      },
+      "user_block_admin": {
+        "message": "User block failed",
+        "description": "You cannot block admin or moderator",
+        "status": 403
+      },
+      "send_notification_data_not_found": {
+        "message": "Send notification data not found",
+        "description": "Send notification data not found in the DOM",
+        "status": 404
+      },
+      "send_notification_button_not_found": {
+        "message": "Send notification button not found",
+        "description": "Send notification button not found in the DOM",
+        "status": 404
+      },
+      "notification_content_not_valid": {
+        "message": "Notification content not valid",
+        "description": "Notification content not valid",
+        "status": 400
+      },
+      "notification_data_not_found": {
+        "message": "Notification data not found",
+        "description": "Notification data not found in the DOM",
+        "status": 404
+      }
+    },
+    "success": {
+      "quiz_added": "Quiz added successfully",
+      "quiz_deleted": "Quiz deleted successfully",
+      "quiz_modified": "Quiz updated successfully",
+      "quiz_published": "Quiz published successfully",
+      "quiz_unpublished": "Quiz unpublished successfully",
+      "question_update_success": "Question updated successfully",
+      "question_deleted": "Question deleted successfully",
+      "question_declined": "Question declined successfully",
+      "question_added": "Question added successfully",
+      "academy_deleted": "Academy deleted successfully",
+      "academy_added": "Academy added successfully",
+      "academy_modified": "Academy updated successfully",
+      "activation_code_added": "Activation code created successfully",
+      "activation_code_deleted": "Activation code deleted successfully",
+      "activation_code_modified": "Activation code updated successfully",
+      "term_modified": "Term updated successfully",
+      "user_blocked": "User blocked",
+      "user_unblocked": "User unblocked",
+      "user_role_updated": "User role updated",
+      "send_notification": "Notification sent successfully to ",
+      "question_checked": "Question checked"
+    },
+    "info": {
+      "role_user_short": "U",
+      "role_moderator_short": "M",
+      "role_admin_short": "A",
+      "role_admin": "Admin",
+      "role_user": "User",
+      "role_moderator": "Moderator",
+      "never_login": "---",
+      "no_terms": "---",
+      "no_code": "---",
+      "no_role": "---",
+      "no_short_role": " ",
+      "no_email": "---",
+      "unknown_user": "Unknown user",
+      "unknown_quiz": "Unknown quiz"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "_id": {
+      "$oid": "67150121a3b57fe1ab22afff"
+    },
+    "user_id": "65c4d966d0fb9c5e760e5a70",
+    "academy_id": "66ab73cf01d7d7b41696466d",
+    "display": "grid",
+    "sort": "desc",
+    "darkmode": true,
+    "autosave": true,
+    "explanation": true,
+    "open_question": true,
+    "__v": 0,
+    "random": true,
+    "livecheck": true
+  },
+  {
+    "_id": {
+      "$oid": "6715015d348364b79cf52574"
+    },
+    "user_id": "66af8e39c5bc73e2c6ae3aaa",
+    "academy_id": "66ab73cf01d7d7b41696466d",
+    "display": "grid",
+    "sort": "like",
+    "darkmode": true,
+    "autosave": true,
+    "explanation": true,
+    "open_question": true,
+    "__v": 0,
+    "random": true,
+    "livecheck": true
+  },
+  {
+    "_id": {
+      "$oid": "67150167348364b79cf52577"
+    },
+    "user_id": "66af9088b75c56feabf92135",
+    "academy_id": "66ab73cf01d7d7b41696466d",
+    "display": "grid",
+    "sort": "like",
+    "darkmode": true,
+    "autosave": true,
+    "explanation": true,
+    "open_question": true,
+    "__v": 0,
+    "random": true,
+    "livecheck": true
+  }
+]

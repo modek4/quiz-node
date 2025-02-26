@@ -1,0 +1,1561 @@
+{
+  "guest": {
+    "texts": {
+      "title": "Kacper Grodzki",
+      "description": "Strona do quizów autorstwa Kacpra Grodzkiego",
+      "keywords": "Strona do quizów",
+      "author": "Kacper Grodzki",
+      "copyright": "Copyright Kacper Grodzki",
+      "site_url": "https://localhost:3000/",
+      "site_banner": "http://localhost:3000/assets/banner.jpg",
+      "footer": "Kacper Grodzki",
+      "index_title_1": "Wszystkie najważniejsze",
+      "index_title_2": "quizy",
+      "index_title_3": "w najlepszym miejscu!",
+      "signin": "Zaloguj się",
+      "signup": "Zarejestruj się",
+      "forgot_password": "Zapomniałeś hasła?",
+      "remember_password": "Pamiętasz hasło?",
+      "change_password": "Zmień hasło",
+      "no_account": "Nie masz konta?",
+      "have_account": "Masz już konto?",
+      "loading": "Ładowanie...",
+      "email": "Email",
+      "password": "Hasło",
+      "password_repeat": "Powtórz hasło",
+      "password_new": "Nowe hasło",
+      "password_new_repeat": "Powtórz nowe hasło",
+      "password_current": "Obecne hasło",
+      "activation_code": "Kod aktywacyjny"
+    },
+    "errors": {
+      "unknown": {
+        "message": "Nieznany błąd",
+        "description": "Wystąpił nieznany błąd",
+        "status": 400
+      },
+      "bad_request": {
+        "message": "Nieprawidłowe żądanie",
+        "description": "Serwer nie mógł zrozumieć żądania z powodu nieprawidłowej składni",
+        "status": 400
+      },
+      "insufficient_permissions": {
+        "message": "Niewystarczające uprawnienia",
+        "description": "Niewystarczające uprawnienia do wykonania tej operacji",
+        "status": 403
+      },
+      "no_data": {
+        "message": "Brak danych",
+        "description": "Nie znaleziono danych",
+        "status": 404
+      },
+      "internal": {
+        "message": "Wewnętrzny błąd serwera",
+        "description": "Wystąpił wewnętrzny błąd serwera",
+        "status": 500
+      },
+      "empty_email": {
+        "message": "Email jest wymagany",
+        "description": "Email jest wymagany",
+        "status": 400
+      },
+      "email_email": {
+        "message": "Email jest niepoprawny",
+        "description": "Email jest niepoprawny",
+        "status": 400
+      },
+      "min_email": {
+        "message": "Email jest zbyt krótki",
+        "description": "Email musi mieć co najmniej 6 znaków",
+        "status": 400
+      },
+      "max_email": {
+        "message": "Email jest zbyt długi",
+        "description": "Email może mieć maksymalnie 255 znaków",
+        "status": 400
+      },
+      "wrong_email": {
+        "message": "Email jest niepoprawny",
+        "description": "Email jest niepoprawny",
+        "status": 404
+      },
+      "exist_email": {
+        "message": "Email jest już zajęty",
+        "description": "Email jest już zajęty",
+        "status": 409
+      },
+      "required_email": {
+        "message": "Email jest wymagany",
+        "description": "Email jest wymagany",
+        "status": 400
+      },
+      "old_new_email": {
+        "message": "Stary i nowy email są takie same",
+        "description": "Stary i nowy email są takie same",
+        "status": 400
+      },
+      "invalid_email": {
+        "message": "Email jest nieprawidłowy",
+        "description": "Email jest nieprawidłowy",
+        "status": 400
+      },
+      "user_blocked": {
+        "message": "Użytkownik jest zablokowany",
+        "description": "Użytkownik jest zablokowany",
+        "status": 403
+      },
+      "empty_data": {
+        "message": "Dane są wymagane",
+        "description": "Dane są wymagane",
+        "status": 400
+      },
+      "empty_name": {
+        "message": "Imię jest wymagane",
+        "description": "Imię jest wymagane",
+        "status": 400
+      },
+      "min_name": {
+        "message": "Imię jest zbyt krótkie",
+        "description": "Imię musi mieć co najmniej 3 znaki",
+        "status": 400
+      },
+      "max_name": {
+        "message": "Imię jest zbyt długie",
+        "description": "Imię może mieć maksymalnie 255 znaków",
+        "status": 400
+      },
+      "wrong_name": {
+        "message": "Imię jest niepoprawne",
+        "description": "Imię jest niepoprawne",
+        "status": 400
+      },
+      "empty_old_password": {
+        "message": "Stare hasło jest wymagane",
+        "description": "Stare hasło jest wymagane",
+        "status": 400
+      },
+      "min_old_password": {
+        "message": "Stare hasło jest zbyt krótkie",
+        "description": "Stare hasło musi mieć co najmniej 8 znaków",
+        "status": 400
+      },
+      "max_old_password": {
+        "message": "Stare hasło jest zbyt długie",
+        "description": "Stare hasło może mieć maksymalnie 255 znaków",
+        "status": 400
+      },
+      "wrong_old_password": {
+        "message": "Stare hasło jest niepoprawne",
+        "description": "Stare hasło jest niepoprawne",
+        "status": 400
+      },
+      "base_old_password": {
+        "message": "Stare hasło jest słabe",
+        "description": "Stare hasło musi zawierać co najmniej jedną małą literę, jedną wielką literę, jedną cyfrę i jeden znak specjalny",
+        "status": 400
+      },
+      "only_old_password": {
+        "message": "Stare hasło jest wymagane",
+        "description": "Stare hasło jest wymagane",
+        "status": 400
+      },
+      "empty_password": {
+        "message": "Hasło jest wymagane",
+        "description": "Hasło jest wymagane",
+        "status": 400
+      },
+      "min_password": {
+        "message": "Hasło jest zbyt krótkie",
+        "description": "Hasło musi mieć co najmniej 8 znaków",
+        "status": 400
+      },
+      "max_password": {
+        "message": "Hasło jest zbyt długie",
+        "description": "Hasło może mieć maksymalnie 255 znaków",
+        "status": 400
+      },
+      "wrong_password": {
+        "message": "Hasło jest niepoprawne",
+        "description": "Hasło jest niepoprawne",
+        "status": 400
+      },
+      "same_password": {
+        "message": "Hasła nie są takie same",
+        "description": "Hasła nie są takie same",
+        "status": 400
+      },
+      "old_new_password": {
+        "message": "Stare i nowe hasło są takie same",
+        "description": "Stare i nowe hasło są takie same",
+        "status": 400
+      },
+      "base_password": {
+        "message": "Hasło jest słabe",
+        "description": "Hasło musi zawierać co najmniej jedną małą literę, jedną wielką literę, jedną cyfrę i jeden znak specjalny",
+        "status": 400
+      },
+      "invalid_password": {
+        "message": "Hasło jest nieprawidłowe",
+        "description": "Hasło jest nieprawidłowe",
+        "status": 400
+      },
+      "only_repassword": {
+        "message": "Powtórzenie hasła jest wymagane",
+        "description": "Powtórzenie hasła jest wymagane",
+        "status": 400
+      },
+      "empty_code": {
+        "message": "Kod aktywacyjny jest wymagany",
+        "description": "Kod aktywacyjny jest wymagany",
+        "status": 400
+      },
+      "length_code": {
+        "message": "Kod aktywacyjny jest niepoprawny",
+        "description": "Kod aktywacyjny musi mieć 6 znaków",
+        "status": 400
+      },
+      "wrong_code": {
+        "message": "Kod aktywacyjny jest niepoprawny",
+        "description": "Kod aktywacyjny jest niepoprawny",
+        "status": 400
+      },
+      "unavailable_code": {
+        "message": "Kod aktywacyjny jest niedostępny",
+        "description": "Kod aktywacyjny jest niedostępny",
+        "status": 404
+      },
+      "not_found": {
+        "message": "Nie znaleziono",
+        "description": "Żądany zasób nie został znaleziony, ale może być dostępny w przyszłości",
+        "status": 404
+      },
+      "user_not_found": {
+        "message": "Nie znaleziono użytkownika",
+        "description": "Nie znaleziono użytkownika w bazie danych",
+        "status": 404
+      },
+      "user_not_updated": {
+        "message": "Nie zaktualizowano ustawień użytkownika",
+        "description": "Nie zaktualizowano ustawień użytkownika w bazie danych",
+        "status": 500
+      },
+      "change_email_failed": {
+        "message": "Zmiana emaila nie powiodła się",
+        "description": "Zmiana emaila nie powiodła się w powiadomieniach bazy danych",
+        "status": 500
+      },
+      "settings_not_found": {
+        "message": "Nie znaleziono ustawień",
+        "description": "Nie znaleziono ustawień w bazie danych",
+        "status": 404
+      },
+      "canvas_not_found": {
+        "message": "Nie znaleziono kanwy",
+        "description": "Nie znaleziono kanwy w DOM",
+        "status": 404
+      },
+      "preloader_not_found": {
+        "message": "Nie znaleziono preloadera",
+        "description": "Nie znaleziono preloadera w DOM",
+        "status": 404
+      },
+      "signin_form_not_found": {
+        "message": "Nie znaleziono formularza logowania",
+        "description": "Nie znaleziono formularza logowania w DOM",
+        "status": 404
+      },
+      "signup_form_not_found": {
+        "message": "Nie znaleziono formularza rejestracji",
+        "description": "Nie znaleziono formularza rejestracji w DOM",
+        "status": 404
+      },
+      "forgot_password_form_not_found": {
+        "message": "Nie znaleziono formularza odzyskiwania hasła",
+        "description": "Nie znaleziono formularza odzyskiwania hasła w DOM",
+        "status": 404
+      },
+      "buttons_form_not_found": {
+        "message": "Nie znaleziono przycisków formularza",
+        "description": "Nie znaleziono przycisków formularza w DOM",
+        "status": 404
+      },
+      "code_updated_failed": {
+        "message": "Aktualizacja kodu aktywacyjnego nie powiodła się",
+        "description": "Aktualizacja kodu aktywacyjnego nie powiodła się",
+        "status": 500
+      },
+      "academy_count_updated_failed": {
+        "message": "Aktualizacja liczby akademii nie powiodła się",
+        "description": "Aktualizacja liczby akademii nie powiodła się",
+        "status": 500
+      },
+      "setting_created_failed": {
+        "message": "Tworzenie ustawienia nie powiodło się",
+        "description": "Tworzenie ustawienia nie powiodło się",
+        "status": 500
+      },
+      "user_created_failed": {
+        "message": "Tworzenie użytkownika nie powiodło się",
+        "description": "Tworzenie użytkownika nie powiodło się",
+        "status": 500
+      },
+      "user_reset_password_failed": {
+        "message": "Resetowanie hasła nie powiodło się",
+        "description": "Resetowanie hasła nie powiodło się",
+        "status": 500
+      },
+      "user_last_login_failed": {
+        "message": "Aktualizacja ostatniego logowania nie powiodła się",
+        "description": "Aktualizacja ostatniego logowania nie powiodła się",
+        "status": 500
+      }
+    },
+    "success": {
+      "unknown": "Nieznany sukces",
+      "password_updated": "Twoje hasło zostało zaktualizowane",
+      "email_updated": "Twój email został zaktualizowany"
+    },
+    "info": {
+      "loading": "Ładowanie..."
+    }
+  },
+  "user": {
+    "texts": {
+      "quiz_title": "Kacper Grodzki Quiz",
+      "navbar_open": "Otwórz pasek nawigacji",
+      "navbar_close": "Zamknij pasek nawigacji",
+      "navbar_main": "Quiz",
+      "navbar_home": "Strona główna",
+      "navbar_likes": "Polubienia",
+      "navbar_notifications": "Powiadomienia",
+      "navbar_scores": "Wyniki",
+      "navbar_account": "Konto",
+      "navbar_profile": "Profil",
+      "navbar_logout": "Wyloguj",
+      "navbar_quiz": "Quiz",
+      "modal_cancel": "Anuluj",
+      "modal_confirm": "Potwierdź",
+      "modal_delete": "Usuń",
+      "modal_delete_text": "Czy na pewno chcesz usunąć ten element?",
+      "modal_edit": "Edytuj",
+      "modal_save": "Zapisz",
+      "modal_close": "Zamknij",
+      "modal_send": "Wyślij",
+      "modal_notification_placeholder": "Wpisz swoją wiadomość tutaj...",
+      "modal_report": "Zgłoś",
+      "modal_report_text": "Czy na pewno chcesz zgłosić ten quiz?",
+      "modal_statistics_title": "Nazwa quizu",
+      "modal_statistics_percentage": "Średni wynik",
+      "quiz_question_count": "Liczba pytań",
+      "quiz_start_text": "Rozpocznij quiz",
+      "search": "Szukaj",
+      "search_placeholder": "Szukaj...",
+      "search_no_results": "Brak wyników",
+      "search_description": "Wyniki wyszukiwania pojawią się poniżej",
+      "list_title": "Lista wszystkich quizów",
+      "term": "Semestr",
+      "term_1": "Pierwszy",
+      "term_2": "Drugi",
+      "term_3": "Trzeci",
+      "term_4": "Czwarty",
+      "term_5": "Piąty",
+      "term_6": "Szósty",
+      "term_7": "Siódmy",
+      "term_8": "Ósmy",
+      "term_9": "Dziewiąty",
+      "term_10": "Dziesiąty",
+      "term_11": "Jedenasty",
+      "term_12": "Dwunasty",
+      "term_13": "Trzynasty",
+      "term_14": "Czternasty",
+      "card_filters": "Filtry",
+      "filters_grid": "Siatka",
+      "filters_list": "Lista",
+      "filters_asc": "Sortuj rosnąco",
+      "filters_desc": "Sortuj malejąco",
+      "filters_like": "Sortuj według polubień",
+      "filters_recent": "Sortuj według najnowszych",
+      "filters_term": "Sortuj według semestru",
+      "filters_academy": "Akademia",
+      "no_notifications": "Brak powiadomień",
+      "clear_notifications": "Oznacz wszystkie jako przeczytane",
+      "account_title": "Ustawienia konta",
+      "account_password": "Zmień hasło",
+      "account_email": "Zmień email",
+      "account_email_label": "Aktualny email",
+      "account_email_new_label": "Nowy email",
+      "account_email_new_placeholder": "Nowy email...",
+      "account_email_placeholder": "Email...",
+      "account_nickname": "Zmień pseudonim",
+      "account_nickname_label": "Aktualny pseudonim",
+      "account_nickname_placeholder": "Pseudonim...",
+      "account_activation_code": "Twój kod aktywacyjny",
+      "account_activation_code_label": "Twój bezpieczny kod aktywacyjny",
+      "account_role": "Twoja rola",
+      "account_random": "Losowa kolejność pytań",
+      "account_autosave": "Automatyczne zapisywanie",
+      "account_explanation": "Pokaż wyjaśnienia",
+      "account_open": "Otwarte pytania",
+      "account_darkmode": "Tryb ciemny",
+      "account_livecheck": "Sprawdzanie na żywo",
+      "quiz_this_image": "Ten obraz",
+      "quiz_this_audio": "Ten dźwięk",
+      "quiz_this_video": "To wideo",
+      "quiz_confirm_answer": "Potwierdź odpowiedź",
+      "quiz_submit": "Prześlij quiz",
+      "browser_support": "Przeglądarka nie obsługuje tej funkcji",
+      "manually_check": "Sprawdzane ręcznie",
+      "scores_table_name_null": "Quiz usunięty",
+      "scores_table_name": "Nazwa quizu",
+      "scores_table_score": "Wynik",
+      "scores_table_score_tooltip": "Wynik może ulec zmianie z powodu pytań otwartych",
+      "scores_table_date": "Data",
+      "scores_table_time": "Czas",
+      "scores_table_avg": "Względem średniej"
+    },
+    "errors": {
+      "not_found_user": {
+        "message": "Nie znaleziono",
+        "description": "Żądany zasób nie został znaleziony, ale może być dostępny w przyszłości",
+        "status": 404
+      },
+      "invalid_type": {
+        "message": "Nieprawidłowy typ",
+        "description": "Nieprawidłowy typ",
+        "status": 400
+      },
+      "navbar_elements_not_found": {
+        "message": "Nie znaleziono elementów nawigacji",
+        "description": "Elementy nawigacji nie zostały znalezione w DOM",
+        "status": 404
+      },
+      "filters_not_found": {
+        "message": "Nie znaleziono filtrów",
+        "description": "Filtry nie zostały znalezione w DOM",
+        "status": 404
+      },
+      "filter_id_missing": {
+        "message": "Brak identyfikatora filtra",
+        "description": "Brak identyfikatora filtra",
+        "status": 404
+      },
+      "filter_type_missing": {
+        "message": "Brak typu filtra",
+        "description": "Brak typu filtra",
+        "status": 404
+      },
+      "list_not_found": {
+        "message": "Nie znaleziono listy",
+        "description": "Lista nie została znaleziona w DOM",
+        "status": 404
+      },
+      "input_not_found": {
+        "message": "Nie znaleziono pola",
+        "description": "Pole nie zostało znalezione w DOM",
+        "status": 404
+      },
+      "card_not_found": {
+        "message": "Nie znaleziono karty",
+        "description": "Karta nie została znaleziona w DOM",
+        "status": 404
+      },
+      "content_not_found": {
+        "message": "Nie znaleziono zawartości",
+        "description": "Zawartość nie została znaleziona w DOM",
+        "status": 404
+      },
+      "scores_not_found": {
+        "message": "Nie znaleziono wyników",
+        "description": "Wyniki nie zostały znalezione w bazie danych",
+        "status": 404
+      },
+      "main_not_found": {
+        "message": "Nie znaleziono głównego elementu",
+        "description": "Główny element nie został znaleziony w DOM",
+        "status": 404
+      },
+      "modal_not_found": {
+        "message": "Nie znaleziono okna modalnego",
+        "description": "Okno modalne nie zostało znalezione w DOM",
+        "status": 404
+      },
+      "modal_not_type_found": {
+        "message": "Nie znaleziono typu okna modalnego",
+        "description": "Typ okna modalnego nie został znaleziony w DOM",
+        "status": 404
+      },
+      "modal_not_table_found": {
+        "message": "Nie znaleziono tabeli okna modalnego",
+        "description": "Tabela okna modalnego nie została znaleziona w DOM",
+        "status": 404
+      },
+      "modal_not_id_found": {
+        "message": "Nie znaleziono identyfikatora okna modalnego",
+        "description": "Identyfikator okna modalnego nie został znaleziony w DOM",
+        "status": 404
+      },
+      "term_invalid": {
+        "message": "Nieprawidłowy semestr",
+        "description": "Semestr jest nieprawidłowy",
+        "status": 400
+      },
+      "no_notification": {
+        "message": "Brak powiadomień",
+        "description": "Nie znaleziono powiadomień w bazie danych",
+        "status": 404
+      },
+      "notification_not_found": {
+        "message": "Nie znaleziono powiadomienia",
+        "description": "Powiadomienie nie zostało znalezione w bazie danych",
+        "status": 404
+      },
+      "read_notification_failed": {
+        "message": "Nie udało się odczytać powiadomienia",
+        "description": "Odczytanie powiadomienia nie powiodło się",
+        "status": 500
+      },
+      "read_notifications_failed": {
+        "message": "Nie udało się odczytać wszystkich powiadomień",
+        "description": "Odczytanie wszystkich powiadomień nie powiodło się",
+        "status": 500
+      },
+      "delete_notification_failed": {
+        "message": "Nie udało się usunąć powiadomienia",
+        "description": "Usunięcie powiadomienia nie powiodło się",
+        "status": 500
+      },
+      "notification_list_not_found": {
+        "message": "Nie znaleziono listy powiadomień",
+        "description": "Lista powiadomień nie została znaleziona w DOM",
+        "status": 404
+      },
+      "quiz_not_found": {
+        "message": "Nie znaleziono quizu",
+        "description": "Quiz nie został znaleziony w bazie danych",
+        "status": 404
+      },
+      "quiz_id_not_found": {
+        "message": "Brak identyfikatora quizu",
+        "description": "Brak identyfikatora quizu w DOM",
+        "status": 404
+      },
+      "quiz_score_not_found": {
+        "message": "Nie znaleziono wyniku quizu",
+        "description": "Wynik quizu nie został znaleziony w DOM",
+        "status": 404
+      },
+      "quiz_time_not_found": {
+        "message": "Nie znaleziono czasu quizu",
+        "description": "Czas quizu nie został znaleziony w DOM",
+        "status": 404
+      },
+      "quiz_question_count": {
+        "message": "Niewystarczająca liczba pytań",
+        "description": "Liczba pytań w quizie jest nieprawidłowa (co najmniej 2)",
+        "status": 400
+      },
+      "questions_not_found": {
+        "message": "Nie znaleziono pytań",
+        "description": "Pytania nie zostały znalezione w DOM",
+        "status": 404
+      },
+      "question_id_not_found": {
+        "message": "Nie znaleziono identyfikatora pytania",
+        "description": "Identyfikator pytania nie został znaleziony w DOM",
+        "status": 404
+      },
+      "quiz_score_mismatch": {
+        "message": "Niezgodność wyników",
+        "description": "Niezgodność wyników pytań i odpowiedzi",
+        "status": 400
+      },
+      "score_create_failed": {
+        "message": "Nie udało się utworzyć wyniku",
+        "description": "Nie udało się utworzyć wyniku w bazie danych",
+        "status": 500
+      },
+      "score_attempts_failed": {
+        "message": "Nie udało się utworzyć prób wyniku",
+        "description": "Nie udało się utworzyć prób wyniku w bazie danych",
+        "status": 500
+      },
+      "quiz_answers_not_found": {
+        "message": "Nie znaleziono odpowiedzi",
+        "description": "Odpowiedzi nie zostały znalezione w DOM",
+        "status": 404
+      },
+      "quiz_answer_not_found": {
+        "message": "Nie znaleziono odpowiedzi",
+        "description": "Odpowiedź nie została znaleziona w DOM",
+        "status": 404
+      },
+      "quiz_answers_left": {
+        "message": "Pozostały niezaznaczone odpowiedzi",
+        "description": "Pozostały niezaznaczone odpowiedzi w quizie",
+        "status": 400
+      },
+      "quiz_submit_not_found": {
+        "message": "Nie znaleziono przesyłania quizu",
+        "description": "Przesyłanie quizu nie zostało znalezione w DOM",
+        "status": 404
+      },
+      "question_not_found": {
+        "message": "Nie znaleziono pytania",
+        "description": "Pytanie nie zostało znalezione w bazie danych",
+        "status": 404
+      },
+      "question_report_failed": {
+        "message": "Zgłoszenie pytania nie powiodło się",
+        "description": "Zmiana statusu zgłoszenia pytania nie powiodła się",
+        "status": 500
+      },
+      "question_already_reported": {
+        "message": "Pytanie już zgłoszono",
+        "description": "Pytanie zostało już zgłoszone przez użytkownika",
+        "status": 400
+      },
+      "reports_not_found": {
+        "message": "Brak zgłoszeń",
+        "description": "Nie znaleziono zgłoszeń w bazie danych",
+        "status": 404
+      },
+      "academy_select_not_found": {
+        "message": "Nie znaleziono wyboru akademii",
+        "description": "Wybór akademii nie został znaleziony w DOM",
+        "status": 404
+      },
+      "academy_id_missing": {
+        "message": "Brak identyfikatora akademii",
+        "description": "Brak identyfikatora akademii",
+        "status": 404
+      },
+      "nickname_form_not_found": {
+        "message": "Nie znaleziono formularza pseudonimu",
+        "description": "Formularz pseudonimu nie został znaleziony w DOM",
+        "status": 404
+      },
+      "same_nickname": {
+        "message": "Pseudonim jest taki sam jak obecny",
+        "description": "Pseudonim jest taki sam jak obecny",
+        "status": 400
+      },
+      "change_password_form_not_found": {
+        "message": "Nie znaleziono formularza zmiany hasła",
+        "description": "Formularz zmiany hasła nie został znaleziony w DOM",
+        "status": 404
+      },
+      "change_email_form_not_found": {
+        "message": "Nie znaleziono formularza zmiany emaila",
+        "description": "Formularz zmiany emaila nie został znaleziony w DOM",
+        "status": 404
+      },
+      "toggle_inputs_not_found": {
+        "message": "Nie znaleziono elementów przełączających",
+        "description": "Elementy przełączające nie zostały znalezione w DOM",
+        "status": 404
+      },
+      "toggle_inputs_timeout": {
+        "message": "Zwolnij",
+        "description": "Limit czasu dla elementów przełączających (zwolnij)",
+        "status": 500
+      },
+      "activation_code_copy_failed": {
+        "message": "Kopiowanie kodu aktywacyjnego nie powiodło się",
+        "description": "Kopiowanie kodu aktywacyjnego nie powiodło się",
+        "status": 500
+      },
+      "activation_code_copy_button_not_found": {
+        "message": "Nie znaleziono przycisku do kopiowania kodu aktywacyjnego",
+        "description": "Przycisk do kopiowania kodu aktywacyjnego nie został znaleziony w DOM",
+        "status": 404
+      },
+      "scores_table_not_found": {
+        "message": "Nie znaleziono tabeli wyników",
+        "description": "Tabela wyników nie została znaleziona w DOM",
+        "status": 404
+      },
+      "send_notification_failed": {
+        "message": "Wysłanie powiadomienia nie powiodło się",
+        "description": "Wysłanie powiadomienia do użytkownika nie powiodło się",
+        "status": 500
+      }
+    },
+    "success": {
+      "logged_in_user": "Pomyślnie zalogowano jako użytkownik",
+      "read_notification": "Powiadomienie odczytane",
+      "read_notifications": "Wszystkie powiadomienia odczytane",
+      "delete_notification": "Przeczytane powiadomienia usunięte",
+      "user_updated": "Ustawienia użytkownika zaktualizowane",
+      "changed_settings": "Twoje ustawienia zostały pomyślnie zmienione",
+      "nickname_updated": "Pseudonim zaktualizowany",
+      "nickname_updated_notification": "Twój pseudonim został zaktualizowany",
+      "password_updated_notification": "Twoje hasło zostało zmienione",
+      "email_updated_notification": "Twój email został zaktualizowany",
+      "activation_code_copied": "Kod aktywacyjny skopiowany pomyślnie",
+      "question_reported": "Pytanie zgłoszone pomyślnie",
+      "question_reported_notification": "Pytanie zostało pomyślnie zgłoszone",
+      "quiz_finished": "Zakończyłeś quiz z wynikiem"
+    },
+    "info": {
+      "info_user": "Informacje o użytkowniku"
+    }
+  },
+  "admin": {
+    "texts": {
+      "navbar_admin": "Panel",
+      "navbar_report": "Zgłoszenia",
+      "quiz_list_title": "Quizy",
+      "quiz_table_title": "Nazwa quizu",
+      "quiz_table_title_placeholder": "Wpisz nazwę quizu...",
+      "quiz_table_terms": "Semestry",
+      "quiz_table_academy": "Akademia",
+      "quiz_table_select_academy": "Wybierz akademię",
+      "quiz_table_file": "Plik z pytaniami",
+      "quiz_table_file_drop": "Wybierz plik, aby przesłać",
+      "quiz_table_count": "Liczba pytań",
+      "quiz_table_questions": "Pytania",
+      "quiz_table_actions": "Akcje",
+      "quiz_delete_text": "Czy na pewno chcesz usunąć ten quiz?",
+      "activation_codes_title": "Kody aktywacyjne",
+      "activation_codes_table_code": "Kod",
+      "activation_codes_table_code_copy": "Kopiuj",
+      "activation_codes_table_terms": "Semestry",
+      "activation_codes_table_terms_edit": "Edytuj semestry",
+      "activation_codes_table_role": "Rola",
+      "activation_codes_table_role_edit": "Edytuj rolę",
+      "activation_codes_table_academy": "Akademia",
+      "activation_codes_table_academy_edit": "Edytuj akademię",
+      "activation_codes_table_actions": "Akcje",
+      "activation_codes_table_amount": "Ilość",
+      "activation_codes_table_select_role": "Wybierz rolę",
+      "activation_codes_table_role__user": "Użytkownik",
+      "activation_codes_table_role__moderator": "Moderator",
+      "activation_codes_table_select_academy": "Wybierz akademię",
+      "activation_codes_delete_text": "Czy na pewno chcesz usunąć ten kod aktywacyjny?",
+      "academies_title": "Akademie",
+      "academies_table_academy": "Akademia",
+      "academies_table_academy_placeholder": "Pełna nazwa akademii...",
+      "academies_table_academy_edit": "Edytuj akademię",
+      "academies_table_academy_code": "Kod akademii",
+      "academies_table_academy_code_edit": "Edytuj kod akademii",
+      "academies_table_users": "Użytkownicy",
+      "academies_table_academy_actions": "Akcje",
+      "academies_delete_text": "Czy na pewno chcesz usunąć tę akademię?",
+      "academies_users": "Użytkownicy",
+      "users_table_login": "Ostatnie logowanie",
+      "users_table_emails": "E-maile",
+      "users_table_code": "Kod",
+      "users_table_terms": "Semestry",
+      "users_table_actions": "Akcje",
+      "actions_add": "Dodaj",
+      "actions_add_question": "Dodaj pytanie",
+      "actions_update": "Aktualizuj",
+      "actions_see": "Zobacz",
+      "actions_public": "Publiczne",
+      "actions_delete": "Usuń",
+      "actions_decline": "Odrzuć",
+      "actions_edit": "Edytuj",
+      "actions_info": "Informacje",
+      "actions_correct": "Poprawne",
+      "actions_incorrect": "Niepoprawne",
+      "actions_generate": "Generuj",
+      "user_role": "Użytkownik",
+      "moderator_role": "Moderator",
+      "admin_role": "Administrator",
+      "report_no_reports": "Brak raportów",
+      "report_no_reports_description": "Nie znaleziono raportów w bazie danych",
+      "report_no_questions": "Brak pytań",
+      "report_no_questions_description": "Nie znaleziono pytań w bazie danych",
+      "quiz_info_title": "Jak sformatować plik quizu?",
+      "quiz_info_text": "Plik quizu musi być w formacie .txt lub .md i musi być zakodowany w UTF-8.",
+      "quiz_info_1": "Pytania dodajemy w formacie Markdown",
+      "quiz_info_2": "Tak dodajemy odpowiedzi",
+      "quiz_info_3": "A tak oznaczamy poprawną odpowiedź",
+      "quiz_info_4": "Tak dodajemy wyjaśnienia do pytań",
+      "quiz_info_5": "Można dodać kod do pytań",
+      "quiz_info_6": "Tak można dodać kod do pytania",
+      "quiz_info_7": "Lub do poprawnej odpowiedzi",
+      "quiz_info_8": "Albo do niepoprawnej odpowiedzi",
+      "quiz_info_9": "Można dodać obrazy, dźwięk lub wideo do pytań",
+      "quiz_info_10": "Można dodać obrazy do pytania lub odpowiedzi",
+      "quiz_info_11": "Podobnie pliki audio w formatach takich jak",
+      "quiz_info_12": "Albo pliki wideo w formatach takich jak",
+      "quiz_info_13": "Można dodać pytanie otwarte w ten sposób",
+      "quiz_info_14": "Oto przykład poprawnej odpowiedzi",
+      "quiz_info_file_title": "Przykład pliku quizu",
+      "quiz_info_file_1": "Jaki jest wynik 3 + 5?",
+      "quiz_info_file_2": "7",
+      "quiz_info_file_3": "8",
+      "quiz_info_file_4": "9",
+      "quiz_info_file_5": "10",
+      "quiz_info_file_6": "Dodanie 3 do 5 daje 8 (chyba) jako suma tych liczb",
+      "quiz_info_file_7": "Które z poniższych to języki programowania?",
+      "quiz_info_file_8": "Python",
+      "quiz_info_file_9": "JavaScript",
+      "quiz_info_file_10": "C++",
+      "quiz_info_file_11": "HTML",
+      "quiz_info_file_12": "Co wyświetli ten kod?",
+      "quiz_info_file_13": "Przykład kodu",
+      "quiz_info_file_14": "Nagłówek pierwszego poziomu",
+      "quiz_info_file_15": "Nagłówek trzeciego poziomu",
+      "quiz_info_file_16": "Tekst bez formatowania",
+      "quiz_info_file_17": "Tworzymy nagłówek pierwszego poziomu - tekst zostanie wyświetlony większą i pogrubioną czcionką",
+      "quiz_info_file_18": "Jak wyświetlić komunikat \"Hello, World!\" w JavaScript?",
+      "quiz_info_file_19": "To poprawna składnia JavaScript do wyświetlenia tekstu w konsoli, ponieważ tak mówi dokumentacja",
+      "quiz_info_file_20": "Co słyszysz w nagraniu?",
+      "quiz_info_file_21": "Opisz swój dzień, swój pierwszy dzień w więzieniu",
+      "quiz_info_file_22": "Nigdy nie chciałem tu trafić"
+    },
+    "errors": {
+      "not_found_admin": {
+        "message": "Nie znaleziono",
+        "description": "Żądany zasób nie został znaleziony, ale może być dostępny w przyszłości",
+        "status": 404
+      },
+      "failed_to_fold": {
+        "message": "Nie udało się zwinąć",
+        "description": "Nie udało się zwinąć elementu w DOM",
+        "status": 500
+      },
+      "fold_button_not_found": {
+        "message": "Nie znaleziono przycisku zwijania",
+        "description": "Przycisk zwijania nie został znaleziony w DOM",
+        "status": 404
+      },
+      "empty_code": {
+        "message": "Nazwa kodu jest wymagana",
+        "description": "Nazwa kodu jest wymagana",
+        "status": 400
+      },
+      "empty_name": {
+        "message": "Nazwa jest wymagana",
+        "description": "Nazwa jest wymagana",
+        "status": 400
+      },
+      "required_name": {
+        "message": "Nazwa jest wymagana",
+        "description": "Nazwa jest wymagana",
+        "status": 400
+      },
+      "required_code": {
+        "message": "Kod jest wymagany",
+        "description": "Kod jest wymagany",
+        "status": 400
+      },
+      "required_term": {
+        "message": "Semestry są wymagane",
+        "description": "Semestry są wymagane",
+        "status": 400
+      },
+      "required_role": {
+        "message": "Rola jest wymagana",
+        "description": "Rola jest wymagana",
+        "status": 400
+      },
+      "required_academy_id": {
+        "message": "Akademia jest wymagana",
+        "description": "Akademia jest wymagana",
+        "status": 400
+      },
+      "required_amount": {
+        "message": "Ilość jest wymagana",
+        "description": "Ilość jest wymagana",
+        "status": 400
+      },
+      "min_amount": {
+        "message": "Ilość jest zbyt mała",
+        "description": "Ilość musi wynosić co najmniej 1",
+        "status": 400
+      },
+      "max_amount": {
+        "message": "Ilość jest zbyt duża",
+        "description": "Ilość może wynosić maksymalnie 100",
+        "status": 400
+      },
+      "integer_amount": {
+        "message": "Ilość nie jest liczbą całkowitą",
+        "description": "Ilość musi być liczbą całkowitą",
+        "status": 400
+      },
+      "base_amount": {
+        "message": "Wartość ilości nie jest prawidłowa",
+        "description": "Wartość ilości musi mieć co najmniej 1 znak",
+        "status": 400
+      },
+      "base_term": {
+        "message": "Wartość semestrów nie jest prawidłowa",
+        "description": "Wartość semestrów musi mieć co najmniej 1 znak",
+        "status": 400
+      },
+      "min_term": {
+        "message": "Semestr jest zbyt krótki",
+        "description": "Semestr musi mieć co najmniej 1 znak",
+        "status": 400
+      },
+      "max_term": {
+        "message": "Semestr jest zbyt długi",
+        "description": "Semestr może mieć maksymalnie 255 znaków",
+        "status": 400
+      },
+      "array_terms": {
+        "message": "Semestry są nieprawidłowe",
+        "description": "Semestry muszą być tablicą ciągów znaków, użyj przecinka do oddzielenia",
+        "status": 400
+      },
+      "base_role": {
+        "message": "Wartość roli nie jest prawidłowa",
+        "description": "Wartość roli musi mieć co najmniej 1 znak",
+        "status": 400
+      },
+      "min_role": {
+        "message": "Rola jest zbyt krótka",
+        "description": "Rola musi mieć co najmniej 1 znak",
+        "status": 400
+      },
+      "max_role": {
+        "message": "Rola jest zbyt długa",
+        "description": "Rola może mieć maksymalnie 255 znaków",
+        "status": 400
+      },
+      "wrong_role": {
+        "message": "Rola jest nieprawidłowa",
+        "description": "Rola jest nieprawidłowa (użytkownik lub moderator)",
+        "status": 400
+      },
+      "min_code": {
+        "message": "Nazwa kodu jest zbyt krótka",
+        "description": "Nazwa kodu musi mieć co najmniej 2 znaki",
+        "status": 400
+      },
+      "max_code": {
+        "message": "Nazwa kodu jest zbyt długa",
+        "description": "Nazwa kodu może mieć maksymalnie 16 znaków",
+        "status": 400
+      },
+      "min_name": {
+        "message": "Nazwa jest zbyt krótka",
+        "description": "Nazwa musi mieć co najmniej 6 znaków",
+        "status": 400
+      },
+      "max_name": {
+        "message": "Nazwa jest zbyt długa",
+        "description": "Nazwa może mieć maksymalnie 255 znaków",
+        "status": 400
+      },
+      "alphanum_name": {
+        "message": "Nazwa zawiera znaki specjalne",
+        "description": "Nazwa musi zawierać tylko znaki alfanumeryczne",
+        "status": 400
+      },
+      "alphanum_code": {
+        "message": "Nazwa kodu zawiera znaki specjalne",
+        "description": "Nazwa kodu musi zawierać tylko znaki alfanumeryczne",
+        "status": 400
+      },
+      "empty_content": {
+        "message": "Treść jest wymagana",
+        "description": "Treść jest wymagana",
+        "status": 400
+      },
+      "min_content": {
+        "message": "Treść jest za krótka",
+        "description": "Treść musi mieć co najmniej 1 znak",
+        "status": 400
+      },
+      "max_content": {
+        "message": "Treść jest za długa",
+        "description": "Treść może mieć maksymalnie 1024 znaki",
+        "status": 400
+      },
+      "base_content": {
+        "message": "Wartość treści nie jest prawidłowa",
+        "description": "Wartość treści musi mieć co najmniej 1 znak",
+        "status": 400
+      },
+      "required_content": {
+        "message": "Treść jest wymagana",
+        "description": "Treść jest wymagana",
+        "status": 400
+      },
+      "quiz_values_required": {
+        "message": "Wszystkie wartości quizu są wymagane",
+        "description": "Wszystkie wartości quizu są wymagane (nazwa, terminy, akademia, plik)",
+        "status": 400
+      },
+      "quiz_file_not_found": {
+        "message": "Plik z pytaniami nie znaleziony",
+        "description": "Nie udało się przesłać pliku z pytaniami",
+        "status": 404
+      },
+      "quiz_table_not_found": {
+        "message": "Tabela quizu nie znaleziono",
+        "description": "Tabela quizu nie znaleziono w DOM",
+        "status": 404
+      },
+      "quiz_file_type": {
+        "message": "Typ pliku niedozwolony (txt lub md)",
+        "description": "Typ pliku z pytaniami niedozwolony (txt lub md)",
+        "status": 400
+      },
+      "quiz_file_size": {
+        "message": "Plik jest za duży (max 1 MB)",
+        "description": "Plik z pytaniami jest za duży (max 1 MB)",
+        "status": 400
+      },
+      "quiz_invalid_data": {
+        "message": "Dane quizu są nieprawidłowe",
+        "description": "Dane quizu są nieprawidłowe",
+        "status": 400
+      },
+      "quiz_name_exists": {
+        "message": "Nazwa quizu już istnieje",
+        "description": "Quiz o podanej nazwie już istnieje",
+        "status": 409
+      },
+      "quiz_parse_heading_not_found": {
+        "message": "Nie znaleziono nagłówka pytania quizu",
+        "description": "Nie znaleziono nagłówka w pliku MD (##)",
+        "status": 404
+      },
+      "quiz_parse_answers_not_found": {
+        "message": "Nie znaleziono odpowiedzi quizu",
+        "description": "Nie znaleziono odpowiedzi w pliku MD (brak listy)",
+        "status": 404
+      },
+      "quiz_parse_answer_empty": {
+        "message": "Pusta odpowiedź w quizie",
+        "description": "Pusta odpowiedź w pliku MD (pusty element listy)",
+        "status": 404
+      },
+      "quiz_parse_question_not_found": {
+        "message": "Nie znaleziono odpowiedzi bez pytania w quizie",
+        "description": "Nie znaleziono odpowiedzi bez pytania w pliku MD",
+        "status": 404
+      },
+      "quiz_parse_media_link_not_found": {
+        "message": "Nie znaleziono linku do media w quizie",
+        "description": "Nie znaleziono linku do media w pliku MD (brak linku)",
+        "status": 404
+      },
+      "quiz_question_required": {
+        "message": "Pytanie jest wymagane",
+        "description": "Pytanie jest wymagane w pliku MD",
+        "status": 404
+      },
+      "quiz_question_invalid_format": {
+        "message": "Nieprawidłowy format pytania",
+        "description": "Nieprawidłowy format pytania w pliku MD (brak nagłówka)",
+        "status": 400
+      },
+      "quiz_questions_delete_failed": {
+        "message": "Nie udało się usunąć pytań",
+        "description": "Nie udało się usunąć pytań z bazy danych",
+        "status": 500
+      },
+      "quiz_likes_delete_failed": {
+        "message": "Nie udało się usunąć polubień",
+        "description": "Nie udało się usunąć polubień z bazy danych",
+        "status": 500
+      },
+      "quiz_no_questions": {
+        "message": "Brak pytań w quizie",
+        "description": "Brak pytań znalezionych w pliku MD",
+        "status": 404
+      },
+      "quiz_question_heading": {
+        "message": "Pytanie ma zły nagłówek",
+        "description": "Nie znaleziono nagłówka pytania w pliku MD (#)",
+        "status": 404
+      },
+      "quiz_answer_heading": {
+        "message": "Odpowiedź ma zły nagłówek",
+        "description": "Nie znaleziono nagłówka odpowiedzi w pliku MD (##)",
+        "status": 404
+      },
+      "quiz_question_length": {
+        "message": "Pytanie jest zbyt długie lub zbyt krótkie",
+        "description": "Pytanie jest zbyt długie lub zbyt krótkie w pliku MD",
+        "status": 400
+      },
+      "quiz_explanation_invalid_format": {
+        "message": "Nieprawidłowy format wyjaśnienia",
+        "description": "Nieprawidłowy format wyjaśnienia w pliku MD (brak nagłówka)",
+        "status": 400
+      },
+      "quiz_explanation_length": {
+        "message": "Wyjaśnienie jest zbyt długie lub zbyt krótkie",
+        "description": "Wyjaśnienie jest zbyt długie lub zbyt krótkie w pliku MD (min 2, max 4096)",
+        "status": 400
+      },
+      "quiz_answers_invalid_format": {
+        "message": "Nieprawidłowy format odpowiedzi",
+        "description": "Nieprawidłowy format odpowiedzi w pliku MD (brak listy)",
+        "status": 400
+      },
+      "quiz_answers_required": {
+        "message": "Odpowiedzi są wymagane",
+        "description": "W pliku MD muszą być przynajmniej dwie odpowiedzi do wyboru",
+        "status": 404
+      },
+      "quiz_answer_required": {
+        "message": "Treść odpowiedzi jest wymagana",
+        "description": "Tekst odpowiedzi jest wymagany w pliku MD",
+        "status": 404
+      },
+      "quiz_answer_length": {
+        "message": "Odpowiedź jest zbyt długa lub zbyt krótka",
+        "description": "Odpowiedź jest zbyt długa lub zbyt krótka w pliku MD",
+        "status": 400
+      },
+      "quiz_open_answer_length": {
+        "message": "Otwarta odpowiedź jest zbyt długa lub zbyt krótka",
+        "description": "Otwarta odpowiedź jest zbyt długa lub zbyt krótka w pliku MD",
+        "status": 400
+      },
+      "quiz_duplicate_answers": {
+        "message": "Powtarzające się odpowiedzi",
+        "description": "Powtarzające się odpowiedzi w pliku MD nie są dozwolone w tym samym pytaniu",
+        "status": 400
+      },
+      "quiz_correct_answer_required": {
+        "message": "Prawidłowa odpowiedź jest wymagana",
+        "description": "Prawidłowa odpowiedź jest wymagana w pliku MD",
+        "status": 404
+      },
+      "quiz_options_content_required": {
+        "message": "Opcje quizu są wymagane",
+        "description": "Opcje quizu są wymagane w pliku MD, jeśli masz opcje",
+        "status": 404
+      },
+      "quiz_answer_options_content_required": {
+        "message": "Opcje odpowiedzi są wymagane",
+        "description": "Opcje odpowiedzi są wymagane w pliku MD, jeśli masz opcje w odpowiedzi",
+        "status": 404
+      },
+      "quiz_open_options_required": {
+        "message": "Opcje otwartego quizu są wymagane",
+        "description": "Opcje otwartego quizu są wymagane w pliku MD z otwartym pytaniem",
+        "status": 404
+      },
+      "quiz_open_answer_required": {
+        "message": "Otwarta odpowiedź do pytania jest wymagana",
+        "description": "Otwarta odpowiedź do pytania jest wymagana w pliku MD, co najmniej jedna",
+        "status": 404
+      },
+      "quiz_open_answer_single": {
+        "message": "Jedna odpowiedź na otwarte pytanie",
+        "description": "Jedna odpowiedź na otwarte pytanie w pliku MD",
+        "status": 400
+      },
+      "quiz_drop_over_not_found": {
+        "message": "Nie znaleziono quiz drop-over",
+        "description": "Nie znaleziono quiz drop-over w DOM",
+        "status": 404
+      },
+      "quiz_select_not_found": {
+        "message": "Nie znaleziono wyboru quizu",
+        "description": "Nie znaleziono wyboru quizu w DOM",
+        "status": 404
+      },
+      "quiz_add_button_not_found": {
+        "message": "Nie znaleziono przycisku dodawania quizu",
+        "description": "Nie znaleziono przycisku dodawania quizu w DOM",
+        "status": 404
+      },
+      "quiz_info_button_not_found": {
+        "message": "Nie znaleziono przycisku informacji o quizie",
+        "description": "Nie znaleziono przycisku informacji o quizie w DOM",
+        "status": 404
+      },
+      "quiz_add_failed": {
+        "message": "Nie udało się dodać quizu",
+        "description": "Nie udało się dodać quizu do bazy danych",
+        "status": 500
+      },
+      "quiz_publish_failed": {
+        "message": "Nie udało się opublikować quizu",
+        "description": "Nie udało się opublikować quizu w bazie danych",
+        "status": 500
+      },
+      "quiz_modify_button_not_found": {
+        "message": "Nie znaleziono przycisku modyfikacji quizu",
+        "description": "Nie znaleziono przycisku modyfikacji quizu w DOM",
+        "status": 404
+      },
+      "question_button_not_found": {
+        "message": "Nie znaleziono przycisku pytania",
+        "description": "Nie znaleziono przycisku pytania w DOM",
+        "status": 404
+      },
+      "question_add_button_not_found": {
+        "message": "Nie znaleziono przycisku dodawania pytania",
+        "description": "Nie znaleziono przycisku dodawania pytania w DOM",
+        "status": 404
+      },
+      "question_edit_button_not_found": {
+        "message": "Nie znaleziono przycisku edytowania pytania",
+        "description": "Nie znaleziono przycisku edytowania pytania w DOM",
+        "status": 404
+      },
+      "question_delete_button_not_found": {
+        "message": "Nie znaleziono przycisku usuwania pytania",
+        "description": "Nie znaleziono przycisku usuwania pytania w DOM",
+        "status": 404
+      },
+      "question_decline_button_not_found": {
+        "message": "Nie znaleziono przycisku odrzucenia pytania",
+        "description": "Nie znaleziono przycisku odrzucenia pytania w DOM",
+        "status": 404
+      },
+      "question_open_button_not_found": {
+        "message": "Nie znaleziono przycisku otwartych pytań",
+        "description": "Nie znaleziono przycisku otwartych pytań w DOM",
+        "status": 404
+      },
+      "question_update_failed": {
+        "message": "Nie udało się zaktualizować pytania",
+        "description": "Nie udało się zaktualizować pytania w bazie danych",
+        "status": 500
+      },
+      "question_add_failed": {
+        "message": "Nie udało się dodać pytania",
+        "description": "Nie udało się dodać pytania do bazy danych",
+        "status": 500
+      },
+      "question_delete_failed": {
+        "message": "Nie udało się usunąć pytania",
+        "description": "Nie udało się usunąć pytania z bazy danych",
+        "status": 500
+      },
+      "question_decline_failed": {
+        "message": "Nie udało się odrzucić pytania",
+        "description": "Nie udało się odrzucić pytania w bazie danych",
+        "status": 500
+      },
+      "quiz_public_button_not_found": {
+        "message": "Nie znaleziono przycisku publikacji quizu",
+        "description": "Nie znaleziono przycisku publikacji quizu w DOM",
+        "status": 404
+      },
+      "quiz_delete_button_not_found": {
+        "message": "Nie znaleziono przycisku usuwania quizu",
+        "description": "Nie znaleziono przycisku usuwania quizu w DOM",
+        "status": 404
+      },
+      "quiz_list_item_failed": {
+        "message": "Nie udało się wyświetlić elementu listy quizu",
+        "description": "Nie udało się wyświetlić elementu listy quizu",
+        "status": 500
+      },
+      "questions_list_item_failed": {
+        "message": "Pytanie z listy nie powiodło się",
+        "description": "Pytanie z listy nie powiodło się w bazie danych",
+        "status": 500
+      },
+      "no_open_questions": {
+        "message": "Brak otwartych pytań",
+        "description": "Nie znaleziono otwartych pytań w bazie danych",
+        "status": 404
+      },
+      "quiz_create_failed": {
+        "message": "Nie udało się utworzyć quizu",
+        "description": "Nie udało się utworzyć quizu w bazie danych",
+        "status": 500
+      },
+      "quiz_questions_create_failed": {
+        "message": "Nie udało się utworzyć pytań do quizu",
+        "description": "Nie udało się utworzyć pytań do quizu w bazie danych",
+        "status": 500
+      },
+      "quiz_modify_exist": {
+        "message": "Nazwa quizu już istnieje",
+        "description": "Quiz o podanej nazwie już istnieje",
+        "status": 409
+      },
+      "quiz_modify_failed": {
+        "message": "Modyfikacja quizu nie powiodła się",
+        "description": "Modyfikacja quizu nie powiodła się w bazie danych",
+        "status": 500
+      },
+      "quiz_modify_data_not_found": {
+        "message": "Dane do modyfikacji quizu nie znalezione",
+        "description": "Dane do modyfikacji quizu nie znalezione w DOM",
+        "status": 404
+      },
+      "academy_special_characters": {
+        "message": "Wartości akademii zawierają znaki specjalne",
+        "description": "Wartości akademii nie mogą zawierać znaków specjalnych",
+        "status": 400
+      },
+      "academy_load_not_found": {
+        "message": "Akademie nie znalezione",
+        "description": "Akademie nie znalezione w DOM",
+        "status": 404
+      },
+      "academy_table_not_found": {
+        "message": "Tabela akademii nie znaleziona",
+        "description": "Tabela akademii nie znaleziono w DOM",
+        "status": 404
+      },
+      "academy_list_failed": {
+        "message": "Listowanie akademii nie powiodło się",
+        "description": "Listowanie akademii nie powiodło się",
+        "status": 500
+      },
+      "academy_list_item_failed": {
+        "message": "Listowanie elementu akademii nie powiodło się",
+        "description": "Listowanie elementu akademii nie powiodło się",
+        "status": 500
+      },
+      "academy_add_failed": {
+        "message": "Dodawanie akademii nie powiodło się",
+        "description": "Dodawanie akademii nie powiodło się",
+        "status": 500
+      },
+      "academy_modify_failed": {
+        "message": "Modyfikacja akademii nie powiodła się",
+        "description": "Modyfikacja akademii nie powiodła się",
+        "status": 500
+      },
+      "academy_not_exist": {
+        "message": "Akademia nie istnieje",
+        "description": "Akademia nie istnieje",
+        "status": 404
+      },
+      "academy_not_found": {
+        "message": "Nie znaleziono akademii",
+        "description": "Nie znaleziono akademii",
+        "status": 404
+      },
+      "academy_exist": {
+        "message": "Akademia już istnieje",
+        "description": "Akademia o podanej nazwie już istnieje",
+        "status": 409
+      },
+      "academy_modify_exist": {
+        "message": "Nazwa lub kod akademii już istnieje",
+        "description": "Akademia o podanej nazwie lub kodzie już istnieje",
+        "status": 409
+      },
+      "academy_has_users": {
+        "message": "Akademia ma użytkowników",
+        "description": "Akademia ma użytkowników, nie można jej usunąć",
+        "status": 409
+      },
+      "academy_delete_button_not_found": {
+        "message": "Przycisk usunięcia akademii nie został znaleziony",
+        "description": "Przycisku usunięcia akademii nie znaleziono w DOM",
+        "status": 404
+      },
+      "academy_add_button_not_found": {
+        "message": "Przycisk dodania akademii nie został znaleziony",
+        "description": "Przycisku dodania akademii nie znaleziono w DOM",
+        "status": 404
+      },
+      "academy_modify_button_not_found": {
+        "message": "Przycisk modyfikacji akademii nie został znaleziony",
+        "description": "Przycisku modyfikacji akademii nie znaleziono w DOM",
+        "status": 404
+      },
+      "academy_modify_data_not_found": {
+        "message": "Dane do modyfikacji akademii nie znalezione",
+        "description": "Dane do modyfikacji akademii nie znalezione w DOM",
+        "status": 404
+      },
+      "term_modify_data_not_found": {
+        "message": "Dane do modyfikacji semestru nie zostały znalezione",
+        "description": "Danych do modyfikacji semestru nie znalezione w DOM",
+        "status": 404
+      },
+      "term_modify_button_not_found": {
+        "message": "Przycisk modyfikacji semestru nie znaleziono",
+        "description": "Przycisku do modyfikacji semestru nie znaleziono w DOM",
+        "status": 404
+      },
+      "term_list_item_failed": {
+        "message": "Listowanie elementu semestrów nie powiodło się",
+        "description": "Listowanie elementu semestrów nie powiodło się",
+        "status": 500
+      },
+      "term_modify_failed": {
+        "message": "Modyfikacja semestru nie powiodła się",
+        "description": "Modyfikacja semestru nie powiodła się",
+        "status": 500
+      },
+      "term_modify_permission": {
+        "message": "Brak uprawnień do modyfikacji semestru",
+        "description": "Nie można modyfikować semestru dla tego użytkownika",
+        "status": 403
+      },
+      "codes_delete_failed": {
+        "message": "Usunięcie kodów aktywacyjnych nie powiodło się",
+        "description": "Usunięcie kodów aktywacyjnych nie powiodło się",
+        "status": 500
+      },
+      "activation_code_not_found": {
+        "message": "Nie znaleziono kodu aktywacyjnego",
+        "description": "Nie znaleziono kodu aktywacyjnego",
+        "status": 404
+      },
+      "activation_code_values_required": {
+        "message": "Wszystkie wartości kodu aktywacyjnego są wymagane",
+        "description": "Wszystkie wartości kodu aktywacyjnego są wymagane (ilość, okresy, rola, akademia)",
+        "status": 404
+      },
+      "activation_code_table_not_found": {
+        "message": "Tabela kodów aktywacyjnych nie została znaleziona",
+        "description": "Tabela kodów aktywacyjnych nie została znaleziona w DOM",
+        "status": 404
+      },
+      "activation_code_list_failed": {
+        "message": "Listowanie kodów aktywacyjnych nie powiodło się",
+        "description": "Listowanie kodów aktywacyjnych nie powiodło się w bazie danych",
+        "status": 500
+      },
+      "activation_code_add_button_not_found": {
+        "message": "Przycisk dodania kodu aktywacyjnego nie został znaleziony",
+        "description": "Przycisk dodania kodu aktywacyjnego nie został znaleziony w DOM",
+        "status": 404
+      },
+      "activation_code_delete_button_not_found": {
+        "message": "Przycisk usunięcia kodu aktywacyjnego nie został znaleziony",
+        "description": "Przycisk usunięcia kodu aktywacyjnego nie został znaleziony w DOM",
+        "status": 404
+      },
+      "activation_code_modify_button_not_found": {
+        "message": "Przycisk modyfikacji kodu aktywacyjnego nie został znaleziony",
+        "description": "Przycisk modyfikacji kodu aktywacyjnego nie został znaleziony w DOM",
+        "status": 404
+      },
+      "activation_code_create_failed": {
+        "message": "Nie udało się utworzyć kodu aktywacyjnego",
+        "description": "Nie udało się utworzyć kodu aktywacyjnego",
+        "status": 500
+      },
+      "activation_code_delete_failed": {
+        "message": "Usunięcie kodu aktywacyjnego nie powiodło się",
+        "description": "Usunięcie kodu aktywacyjnego nie powiodło się",
+        "status": 500
+      },
+      "activation_code_modify_failed": {
+        "message": "Modyfikacja kodu aktywacyjnego nie powiodła się",
+        "description": "Modyfikacja kodu aktywacyjnego nie powiodła się",
+        "status": 500
+      },
+      "activation_code_generate_failed": {
+        "message": "Generowanie kodu aktywacyjnego nie powiodło się",
+        "description": "Generowanie kodu aktywacyjnego nie powiodło się",
+        "status": 500
+      },
+      "activation_code_add_failed": {
+        "message": "Dodawanie kodu aktywacyjnego nie powiodło się",
+        "description": "Dodawanie kodu aktywacyjnego nie powiodło się",
+        "status": 500
+      },
+      "users_table_not_found": {
+        "message": "Tabela użytkowników nie została znaleziona",
+        "description": "Tabela użytkowników nie została znaleziona w DOM",
+        "status": 404
+      },
+      "users_table_role_not_found": {
+        "message": "Nie znaleziono roli w tabeli użytkowników",
+        "description": "Nie znaleziono roli w tabeli użytkowników w DOM",
+        "status": 404
+      },
+      "users_not_found": {
+        "message": "Nie znaleziono użytkowników",
+        "description": "Nie znaleziono użytkowników w bazie danych",
+        "status": 404
+      },
+      "user_role_failed": {
+        "message": "Zmiana roli użytkownika nie powiodła się",
+        "description": "Zmiana roli użytkownika nie powiodła się w bazie danych",
+        "status": 500
+      },
+      "user_role_admin_failed": {
+        "message": "Zmiana roli użytkownika nie powiodła się",
+        "description": "Nie można zmienić roli na admina",
+        "status": 403
+      },
+      "users_info_button_not_found": {
+        "message": "Przycisk informacji o użytkowniku nie został znaleziony",
+        "description": "Przycisk informacji o użytkowniku nie został znaleziony w DOM",
+        "status": 404
+      },
+      "codes_not_found": {
+        "message": "Nie znaleziono kodów",
+        "description": "Nie znaleziono kodów w bazie danych",
+        "status": 404
+      },
+      "user_block_failed": {
+        "message": "Blokowanie użytkownika nie powiodło się",
+        "description": "Blokowanie użytkownika nie powiodło się",
+        "status": 500
+      },
+      "user_block_admin": {
+        "message": "Blokowanie użytkownika nie powiodło się",
+        "description": "Nie można zablokować administratora lub moderatora",
+        "status": 403
+      },
+      "send_notification_data_not_found": {
+        "message": "Nie znaleziono danych powiadomienia",
+        "description": "Nie znaleziono danych powiadomienia w DOM",
+        "status": 404
+      },
+      "send_notification_button_not_found": {
+        "message": "Przycisk wysyłania powiadomienia nie został znaleziony",
+        "description": "Przycisk wysyłania powiadomienia nie został znaleziony w DOM",
+        "status": 404
+      },
+      "notification_content_not_valid": {
+        "message": "Treść powiadomienia nieprawidłowa",
+        "description": "Treść powiadomienia nie jest prawidłowa",
+        "status": 400
+      },
+      "notification_data_not_found": {
+        "message": "Nie znaleziono danych powiadomienia",
+        "description": "Nie znaleziono danych powiadomienia w DOM",
+        "status": 404
+      }
+    },
+    "success": {
+      "quiz_added": "Quiz dodany pomyślnie",
+      "quiz_deleted": "Quiz usunięty pomyślnie",
+      "quiz_modified": "Quiz zaktualizowany pomyślnie",
+      "quiz_published": "Quiz opublikowany pomyślnie",
+      "quiz_unpublished": "Quiz wycofany z publikacji pomyślnie",
+      "question_update_success": "Pytanie zaktualizowane pomyślnie",
+      "question_deleted": "Pytanie usunięte pomyślnie",
+      "question_declined": "Pytanie odrzucone pomyślnie",
+      "question_added": "Pytanie dodane pomyślnie",
+      "academy_deleted": "Akademia usunięta pomyślnie",
+      "academy_added": "Akademia dodana pomyślnie",
+      "academy_modified": "Akademia zaktualizowana pomyślnie",
+      "activation_code_added": "Kod aktywacyjny utworzony pomyślnie",
+      "activation_code_deleted": "Kod aktywacyjny usunięty pomyślnie",
+      "activation_code_modified": "Kod aktywacyjny zaktualizowany pomyślnie",
+      "term_modified": "Semestr zaktualizowany pomyślnie",
+      "user_blocked": "Użytkownik zablokowany",
+      "user_unblocked": "Użytkownik odblokowany",
+      "user_role_updated": "Rola użytkownika zaktualizowana",
+      "send_notification": "Powiadomienie wysłane pomyślnie do ",
+      "question_checked": "Pytanie sprawdzone"
+    },
+    "info": {
+      "role_user_short": "U",
+      "role_moderator_short": "M",
+      "role_admin_short": "A",
+      "role_admin": "Administrator",
+      "role_user": "Użytkownik",
+      "role_moderator": "Moderator",
+      "never_login": "---",
+      "no_terms": "---",
+      "no_code": "---",
+      "no_role": "---",
+      "no_short_role": " ",
+      "no_email": "---",
+      "unknown_user": "Nieznany użytkownik",
+      "unknown_quiz": "Nieznany quiz"
+    }
+  }
+}

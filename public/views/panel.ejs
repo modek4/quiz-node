@@ -1,0 +1,477 @@
+<header class="header">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="navbar-open"
+    aria-label="<%=messages['navbar_open']%>"
+    role="button">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+  <div class="search hidden-accessible" role="search">
+    <label id="search-input-label" for="search-input" class="hidden-accessible"
+      ><%=messages['search']%></label
+    >
+    <input
+      type="text"
+      placeholder="<%=messages['search_placeholder']%>"
+      class="search-input"
+      name="search-input"
+      id="search-input"
+      aria-labelledby="search-input-label"
+      aria-description="<%=messages['search_description']%>" />
+  </div>
+</header>
+<section class="admin-list" aria-labelledby="list-title" aria-live="polite" aria-atomic="true">
+  <ul role="list" class="admin-list-items">
+    <li role="listitem" class="admin-list-items-quiz" data-foldable="item">
+      <div
+        id="admin-list-items-quiz-title"
+        class="admin-list-items-quiz-title"
+        data-foldable="button">
+        <h2><%=messages['quiz_list_title']%></h2>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        </svg>
+      </div>
+      <table
+        class="admin-list-items-quiz-table"
+        role="table"
+        aria-labelledby="admin-list-items-quiz-title">
+        <thead>
+          <tr>
+            <th role="columnheader" scope="col" id="col-quiz-table">
+              <%=messages['quiz_table_title']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-quiz-terms-table">
+              <%=messages['quiz_table_terms']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-quiz-academy-table">
+              <%=messages['quiz_table_academy']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-quiz-file-table">
+              <%=messages['quiz_table_file']%>
+              <sup class="admin-list-items-quiz-table-info">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                </svg>
+              </sup>
+            </th>
+            <th role="columnheader" scope="col" id="col-quiz-actions-table">
+              <%=messages['quiz_table_actions']%>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row" data-quiz="add">
+            <td role="cell" aria-labelledby="col-quiz-table">
+              <div class="table-td-content">
+                <label
+                  for="admin-list-items-quiz-table-title"
+                  class="hidden-accessible"
+                  id="admin-list-items-quiz-table-title-label"
+                  ><%=messages['quiz_table_title']%></label
+                >
+                <input
+                  type="text"
+                  name="admin-list-items-quiz-table-title"
+                  id="admin-list-items-quiz-table-title"
+                  data-title="value"
+                  placeholder="<%=messages['quiz_table_title_placeholder']%>"
+                  aria-labelledby="admin-list-items-quiz-table-title-label"
+                  required />
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-quiz-terms-table">
+              <div class="table-td-content">
+                <label
+                  for="admin-list-items-quiz-table-terms"
+                  class="hidden-accessible"
+                  id="admin-list-items-quiz-table-terms-label"
+                  ><%=messages['quiz_table_terms']%></label
+                >
+                <input
+                  type="text"
+                  name="admin-list-items-quiz-table-terms"
+                  id="admin-list-items-quiz-table-terms"
+                  data-terms="value"
+                  placeholder="1,2,3,4...14"
+                  aria-labelledby="admin-list-items-quiz-table-terms-label"
+                  required />
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-quiz-academy-table">
+              <div class="table-td-content">
+                <select
+                  name="admin-list-items-quiz-table-academy"
+                  id="admin-list-items-quiz-table-academy"
+                  data-academy="value"
+                  required
+                  aria-labelledby="col-quiz-academy-table">
+                  <option value="0" selected disabled>
+                    <%=messages['quiz_table_select_academy']%>
+                  </option>
+                </select>
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-quiz-file-table">
+              <div class="table-td-content file-upload">
+                <label
+                  for="admin-list-items-quiz-table-file"
+                  id="admin-list-items-quiz-table-file-label"
+                  ><%=messages['quiz_table_file_drop']%></label
+                >
+                <input
+                  type="file"
+                  name="admin-list-items-quiz-table-file[]"
+                  id="admin-list-items-quiz-table-file"
+                  data-file="value"
+                  aria-labelledby="admin-list-items-quiz-table-file-label"
+                  accept=".txt,.md"
+                  required />
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-quiz-actions-table">
+              <div class="table-td-content">
+                <button
+                  aria-label="<%=messages['actions_add']%>"
+                  class="admin-list-items-quiz-table-button-add">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li role="listitem" class="admin-list-items-code" data-foldable="item">
+      <div
+        id="admin-list-items-code-title"
+        class="admin-list-items-code-title"
+        data-foldable="button">
+        <h2><%=messages['activation_codes_title']%></h2>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        </svg>
+      </div>
+      <table
+        class="admin-list-items-code-table"
+        role="table"
+        aria-labelledby="admin-list-items-code-title">
+        <thead>
+          <tr>
+            <th role="columnheader" scope="col" id="col-code-table">
+              <%=messages['activation_codes_table_code']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-code-terms-table">
+              <%=messages['activation_codes_table_terms']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-code-role-table">
+              <%=messages['activation_codes_table_role']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-code-academy-table">
+              <%=messages['activation_codes_table_academy']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-code-actions-table">
+              <%=messages['activation_codes_table_actions']%>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row" data-code="add">
+            <td role="cell" aria-labelledby="col-code-table">
+              <div class="table-td-content">
+                <label
+                  for="admin-list-items-code-table-amount"
+                  class="hidden-accessible"
+                  id="admin-list-items-code-table-amount-label"
+                  ><%=messages['activation_codes_table_amount']%></label
+                >
+                <input
+                  type="number"
+                  name="admin-list-items-code-table-amount"
+                  id="admin-list-items-code-table-amount"
+                  data-amount="value"
+                  placeholder="1...100"
+                  min="1"
+                  max="100"
+                  aria-labelledby="admin-list-items-code-table-amount-label"
+                  required />
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-code-terms-table">
+              <div class="table-td-content">
+                <label
+                  for="admin-list-items-code-table-terms"
+                  class="hidden-accessible"
+                  id="admin-list-items-code-table-terms-label"
+                  ><%=messages['activation_codes_table_terms']%></label
+                >
+                <input
+                  type="text"
+                  name="admin-list-items-code-table-terms"
+                  id="admin-list-items-code-table-terms"
+                  data-terms="value"
+                  placeholder="1,2,3,4...14"
+                  aria-labelledby="admin-list-items-code-table-terms-label"
+                  required />
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-code-role-table">
+              <div class="table-td-content">
+                <select
+                  name="admin-list-items-code-table-role"
+                  id="admin-list-items-code-table-role"
+                  data-role="value"
+                  required
+                  aria-labelledby="col-code-role-table">
+                  <% if (user.role == 'admin') { %>
+                  <option value="0" selected disabled>
+                    <%=messages['activation_codes_table_select_role']%>
+                  </option>
+                  <option value="user"><%=messages['activation_codes_table_role__user']%></option>
+                  <option value="moderator">
+                    <%=messages['activation_codes_table_role__moderator']%>
+                  </option>
+                  <% } else { %>
+                  <option value="user" selected>
+                    <%=messages['activation_codes_table_role__user']%>
+                  </option>
+                  <% } %>
+                </select>
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-code-academy-table">
+              <div class="table-td-content">
+                <select
+                  name="admin-list-items-code-table-academy"
+                  id="admin-list-items-code-table-academy"
+                  data-academy="value"
+                  required
+                  aria-labelledby="col-code-academy-table">
+                  <option value="0" selected disabled>
+                    <%=messages['activation_codes_table_select_academy']%>
+                  </option>
+                </select>
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-code-actions-table">
+              <div class="table-td-content">
+                <button
+                  aria-label="<%=messages['actions_add']%>"
+                  class="admin-list-items-activation-code-table-button-add">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li role="listitem" class="admin-list-items-academy" data-foldable="item">
+      <div
+        id="admin-list-items-academy-title"
+        class="admin-list-items-academy-title"
+        data-foldable="button">
+        <h2><%=messages['academies_title']%></h2>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        </svg>
+      </div>
+      <table
+        class="admin-list-items-academy-table"
+        role="table"
+        aria-labelledby="admin-list-items-academy-title">
+        <thead>
+          <tr>
+            <th role="columnheader" scope="col" id="col-academy-users-table">
+              <%=messages['academies_table_users']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-academy-table">
+              <%=messages['academies_table_academy']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-academy-code-table">
+              <%=messages['academies_table_academy_code']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-academy-actions-table">
+              <%=messages['academies_table_academy_actions']%>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row">
+            <td
+              role="cell"
+              aria-labelledby="col-academy-users-table"
+              id="admin-list-items-academy-table-users-svg">
+              <div class="table-td-content">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+                </svg>
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-academy-table">
+              <div class="table-td-content">
+                <label
+                  for="admin-list-items-academy-table-name"
+                  class="hidden-accessible"
+                  id="admin-list-items-academy-table-name-label"
+                  ><%=messages['academies_table_academy']%></label
+                >
+                <input
+                  type="text"
+                  name="admin-list-items-academy-table-name"
+                  id="admin-list-items-academy-table-name"
+                  placeholder="<%=messages['academies_table_academy_placeholder']%>"
+                  aria-labelledby="admin-list-items-academy-table-name-label"
+                  required />
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-academy-code-table">
+              <div class="table-td-content">
+                <label
+                  for="admin-list-items-academy-table-code"
+                  class="hidden-accessible"
+                  id="admin-list-items-academy-table-code-label"
+                  ><%=messages['academies_table_academy_code']%></label
+                >
+                <input
+                  type="text"
+                  name="admin-list-items-academy-table-code"
+                  id="admin-list-items-academy-table-code"
+                  placeholder="<%=messages['academies_table_academy_code']%>"
+                  aria-labelledby="admin-list-items-academy-table-code-label"
+                  required />
+              </div>
+            </td>
+            <td role="cell" aria-labelledby="col-academy-actions-table">
+              <div class="table-td-content">
+                <button
+                  aria-label="<%=messages['actions_add']%>"
+                  class="admin-list-items-academy-table-button-add">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                </button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </li>
+    <li role="listitem" class="admin-list-items-users" data-foldable="item">
+      <div
+        id="admin-list-items-users-title"
+        class="admin-list-items-users-title"
+        data-foldable="button">
+        <h2><%=messages['academies_users']%></h2>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+        </svg>
+      </div>
+      <table
+        class="admin-list-items-users-table"
+        role="table"
+        aria-labelledby="admin-list-items-users-title">
+        <thead>
+          <tr>
+            <th role="columnheader" scope="col" id="col-users-email-table">
+              <%=messages['users_table_emails']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-users-login-table">
+              <%=messages['users_table_login']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-users-code-table">
+              <%=messages['users_table_code']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-users-terms-table">
+              <%=messages['users_table_terms']%>
+            </th>
+            <th role="columnheader" scope="col" id="col-users-actions-table">
+              <%=messages['users_table_actions']%>
+            </th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,14 @@
+[
+  {
+    "_id": {
+      "$oid": "66ab73cf01d7d7b41696466d"
+    },
+    "date": {
+      "$date": "2024-08-01T11:38:55.482Z"
+    },
+    "__v": 0,
+    "code": "WIISI",
+    "name": "Wydział Informatyki i Sztucznej Inteligencji",
+    "user_count": 3
+  }
+]

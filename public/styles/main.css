@@ -1,0 +1,447 @@
+:root {
+  --color-main: 250, 250, 250;
+  --color-secondary: 4, 4, 4;
+  --color-dark: 30, 30, 30;
+  --color-accent: 112, 18, 107;
+  --color-accent-light: 186, 65, 178;
+  --color-incorrect: 231, 30, 30;
+  --color-correct: 30, 231, 30;
+}
+:root .darkmode {
+  --color-main: 20, 20, 20;
+  --color-secondary: 230, 230, 230;
+  --color-dark: 4, 4, 4;
+  --color-accent: 186, 80, 178;
+  --color-accent-light: 207, 90, 198;
+  --color-incorrect: 255, 77, 77;
+  --color-correct: 85, 214, 85;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../assets/fonts/Inter.ttf") format("truetype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(var(--color-main), 1);
+  z-index: 999;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease-in-out, visibility 0.25s ease-in-out;
+}
+
+.preloader-circle {
+  width: 5em;
+  height: 5em;
+  border: 0.5em solid rgba(var(--color-accent), 0.1);
+  border-top: 0.5em solid rgba(var(--color-accent), 1);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: relative;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.novalid {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 9999999;
+}
+.novalid p {
+  position: relative;
+  padding: 0.3em;
+  font-size: clamp(1.2em, 1.1vw, 4em);
+  color: rgb(var(--color-secondary));
+  margin: 0.5em;
+  background-color: rgba(var(--color-incorrect), 0.5);
+  border-radius: 0.5em;
+  animation: fade-in 0.25s ease-in-out forwards;
+}
+.novalid p.info {
+  background-color: rgba(var(--color-accent-light), 0.5);
+}
+.novalid p.success {
+  background-color: rgba(var(--color-correct), 0.5);
+}
+.novalid p.hide {
+  animation: fade-out 0.125s ease-in-out forwards;
+}
+
+dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(var(--color-dark), 0.5);
+  z-index: 99999;
+  overflow: hidden;
+}
+dialog[open] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+dialog[open] .modal-content {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 30em;
+  background-color: rgba(var(--color-main), 1);
+  border-radius: 0.5em;
+  padding: 1em;
+  box-shadow: 0 0 1em rgba(var(--color-dark), 0.5);
+  animation: fade-in 0.25s ease-in-out forwards;
+}
+dialog[open] .modal-content.hide {
+  animation: fade-out 0.125s ease-in-out forwards;
+}
+dialog[open] .modal-content h2 {
+  font-size: 1.5em;
+  color: rgba(var(--color-secondary), 0.95);
+  padding: 0.25em;
+  text-align: center;
+  width: 100%;
+  border-bottom: 0.1em solid rgba(var(--color-accent), 0.25);
+}
+dialog[open] .modal-content ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+dialog[open] .modal-content ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0.5em;
+}
+dialog[open] .modal-content ul li.quiz_listitem {
+  margin: 0;
+}
+dialog[open] .modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  color: rgba(var(--color-secondary), 1);
+}
+dialog[open] .modal-content table th,
+dialog[open] .modal-content table td {
+  border: 0.1em solid rgba(var(--color-accent), 0.25);
+  padding: 0.5em;
+  text-align: center;
+}
+dialog[open] .modal-content table th {
+  background-color: rgba(var(--color-accent), 0.1);
+}
+dialog[open] .modal-content table td {
+  background-color: rgba(var(--color-main), 1);
+}
+dialog[open] .modal-content p,
+dialog[open] .modal-content label {
+  font-size: 1.2em;
+  color: rgba(var(--color-secondary), 0.95);
+  margin: 0.5em;
+  text-align: center;
+  width: 100%;
+}
+dialog[open] .modal-content.justify p {
+  text-align: justify;
+  text-justify: inter-word;
+  text-indent: 1em;
+}
+dialog[open] .modal-content button {
+  margin: 0.5em 0.5em 0 0.5em;
+  padding: 0.5em;
+  font-size: 1.2em;
+  color: rgba(var(--color-secondary), 0.5);
+  background-color: rgba(var(--color-accent), 0.1);
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+dialog[open] .modal-content button:hover {
+  color: rgba(var(--color-accent), 1);
+}
+dialog[open] .modal-content input {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  color: rgba(var(--color-secondary), 0.5);
+  background-color: rgba(var(--color-accent), 0.1);
+  border-radius: 0.5em;
+  transition: color 0.15s ease-in-out;
+}
+dialog[open] .modal-content input:focus {
+  color: rgba(var(--color-accent), 1);
+}
+dialog[open] .modal-content input::-moz-placeholder {
+  color: rgba(var(--color-secondary), 0.5);
+}
+dialog[open] .modal-content input::placeholder {
+  color: rgba(var(--color-secondary), 0.5);
+}
+dialog[open] .modal-content input[type=submit] {
+  width: initial;
+  margin-top: 0.5em;
+  padding: 0.5em;
+  font-size: 1.2em;
+  color: rgba(var(--color-main), 1);
+  background-color: rgba(var(--color-accent), 1);
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+dialog[open] .modal-content input[type=submit]:hover {
+  background-color: rgba(var(--color-accent-light), 1);
+}
+dialog[open] .modal-content .switch {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+dialog[open] .modal-content .switch span {
+  font-size: 1.1em;
+  padding: 0 1em;
+}
+@media (max-width: 768px) {
+  dialog[open] .modal-content .switch span {
+    font-size: 0.8em;
+    padding: 0 0.45em;
+  }
+}
+dialog[open] .modal-content .switch .checkbox {
+  display: none;
+}
+dialog[open] .modal-content .switch .checkbox:active ~ .slider::before {
+  transform: translate(0);
+}
+dialog[open] .modal-content .switch .checkbox:checked ~ .slider {
+  background-color: rgba(var(--color-accent-light), 1);
+}
+dialog[open] .modal-content .switch .checkbox:checked ~ .slider::before {
+  transform: translateX(30px);
+  box-shadow: 0 0 0.5em 0.15em rgba(0, 0, 0, 0.25);
+}
+dialog[open] .modal-content .switch .slider {
+  width: 60px;
+  height: 30px;
+  background-color: rgba(var(--color-secondary), 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border: 0.2em solid transparent;
+  transition: 0.3s;
+  box-shadow: 0 0 0.8em 0 rgba(0, 0, 0, 0.25) inset;
+  cursor: pointer;
+}
+dialog[open] .modal-content .switch .slider::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--color-primary), 0.75);
+  transform: translateX(-30px);
+  border-radius: 20px;
+  transition: 0.3s;
+  box-shadow: 0 0 0.5em 0.15em rgba(0, 0, 0, 0.25);
+}
+dialog[open] .modal-content select {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  color: rgba(var(--color-secondary), 0.5);
+  background-color: rgba(var(--color-accent), 0.1);
+  border-radius: 0.5em;
+  transition: color 0.15s ease-in-out;
+}
+dialog[open] .modal-content select:focus {
+  color: rgba(var(--color-accent), 1);
+}
+dialog[open] .modal-content select option {
+  color: rgba(var(--color-secondary), 0.5);
+}
+dialog[open] .modal-content select option:checked {
+  color: rgba(var(--color-accent), 1);
+}
+dialog[open] .modal-content select option:hover {
+  color: rgba(var(--color-accent), 1);
+}
+dialog[open] .modal-statistics {
+  max-height: 50%;
+  overflow-y: auto;
+}
+dialog[open] .modal-image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  max-width: 90%;
+  overflow-y: auto;
+  max-height: 60%;
+  background-color: rgba(var(--color-main), 1);
+  border-radius: 0.5em;
+  padding: 1em;
+  box-shadow: 0 0 1em rgba(var(--color-dark), 0.5);
+  animation: fade-in 0.25s ease-in-out forwards;
+}
+dialog[open] .modal-image.hide {
+  animation: fade-out 0.125s ease-in-out forwards;
+}
+dialog[open] .modal-image button {
+  margin: 0.5em 0.5em 0 0.5em;
+  padding: 0.5em;
+  font-size: 1.2em;
+  color: rgba(var(--color-secondary), 0.5);
+  background-color: rgba(var(--color-accent), 0.1);
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: color 0.15s ease-in-out;
+}
+dialog[open] .modal-image button:hover {
+  color: rgba(var(--color-accent), 1);
+}
+dialog[open] .modal-image img {
+  height: auto;
+  width: 90%;
+  border-radius: 1em;
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: pixelated;
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+::-webkit-scrollbar {
+  width: 0.5em;
+  height: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(var(--color-main), 0.3);
+  border-radius: 1em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(var(--color-main), 0.5);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(var(--color-secondary), 0.5);
+}
+
+::-moz-selection {
+  background-color: rgba(var(--color-accent), 0.85);
+  color: rgba(var(--color-main), 1);
+}
+
+::selection {
+  background-color: rgba(var(--color-accent), 0.85);
+  color: rgba(var(--color-main), 1);
+}
+
+.inter-regular * {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.inter-bold * {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.inter-light * {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden-accessible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  left: -10000px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}/*# sourceMappingURL=main.css.map */

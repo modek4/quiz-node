@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="<%= language %>">
+  <head>
+    <title><%=messages['title']%></title>
+    <base href="/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="translucent" />
+    <meta name="theme-color" content="#00b6ed" />
+    <meta name="author" content="<%=messages['author']%>" />
+    <meta name="copyright" content="<%=messages['copyright']%>" />
+    <meta name="keywords" content="<%=messages['keywords']%>" />
+    <meta name="robots" content="nofollow" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="referrer" content="never" />
+    <meta http-equiv="expires" content="43200" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="<%=messages['site_name']%>" />
+    <meta name="title" content="<%=messages['title']%>" />
+    <meta property="og:title" content="<%=messages['title']%>" />
+    <meta property="twitter:title" content="<%=messages['title']%>" />
+    <meta itemprop="name" content="<%=messages['site_name']%>" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="<%=messages['site_url']%>" />
+    <meta property="twitter:url" content="<%=messages['site_url']%>" />
+    <meta property="image" content="<%=messages['site_banner']%>" />
+    <meta property="og:image" content="<%=messages['site_banner']%>" />
+    <meta property="twitter:image" content="<%=messages['site_banner']%>" />
+    <meta name="description" content="<%=messages['description']%>" />
+    <meta property="og:description" content="<%=messages['description']%>" />
+    <meta property="twitter:description" content="<%=messages['description']%>" />
+    <meta itemprop="description" content="<%=messages['description']%>" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png" />
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="apple-mobile-web-app-title" content="<%=messages['title']%>" />
+    <meta name="application-name" content="<%=messages['title']%>" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="msapplication-TileImage" content="assets/favicons/mstile-144x144.png" />
+    <link id="canonical" rel="canonical" href="<%=messages['site_url']%>" />
+    <meta name="browsermode" content="application" />
+    <link rel="preload" href="styles/main.css" as="style" onload="this.rel='stylesheet'" />
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+    <script defer type="module" src="scripts/index.js"></script>
+  </head>
+  <body class="inter-regular">
+    <div class="preloader">
+      <div class="preloader-circle"></div>
+    </div>
+    <div class="novalid" aria-live="polite"></div>
+    <header>
+      <div>
+        <h1>
+          <%=messages['index_title_1']%>
+          <span class="magic" aria-label="exciting quizzes highlighted with stars">
+            <span class="magic-star" aria-hidden="true">
+              <svg viewBox="0 0 512 512" aria-hidden="true">
+                <path
+                  d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+              </svg>
+            </span>
+            <span class="magic-text"><%=messages['index_title_2']%></span>
+          </span>
+          <%=messages['index_title_3']%>
+        </h1>
+      </div>
+      <div aria-label="User authentication">
+        <button class="sign-in-button" aria-label="Sign in for returning users">
+          <%=messages['signin']%>
+        </button>
+        <button class="sign-up-button" aria-label="Sign up for new users">
+          <%=messages['signup']%>
+        </button>
+      </div>
+    </header>
+    <section>
+      <form class="sign-in" autocomplete="on" method="POST" action="" aria-labelledby="signInForm">
+        <h2 id="signInForm"><%=messages['signin']%></h2>
+        <label for="sign-in-email" id="sign-in-email-label" class="hidden-accessible"
+          ><%=messages['email']%></label
+        >
+        <input
+          type="text"
+          id="sign-in-email"
+          name="sign-in-email"
+          placeholder="<%=messages['email']%>"
+          required
+          aria-required="true"
+          aria-labelledby="sign-in-email-label" />
+        <label for="sign-in-password" id="sign-in-password-label" class="hidden-accessible"
+          ><%=messages['password']%></label
+        >
+        <input
+          type="password"
+          id="sign-in-password"
+          name="sign-in-password"
+          placeholder="<%=messages['password']%>"
+          required
+          aria-required="true"
+          aria-labelledby="sign-in-password-label" />
+        <div>
+          <a class="forgot-password-button" role="button" aria-label="Recover forgotten password"
+            ><%=messages['forgot_password']%></a
+          >
+        </div>
+        <input type="submit" value="<%=messages['signin']%>" aria-label="Sign in" />
+        <span
+          ><%=messages['no_account']%>
+          <a class="sign-up-button" role="button" aria-label="Navigate to sign up"
+            ><%=messages['signup']%></a
+          ></span
+        >
+      </form>
+      <form class="sign-up" method="POST" action="" aria-labelledby="signUpForm">
+        <h2 id="signUpForm"><%=messages['signup']%></h2>
+        <label for="sign-up-email" id="sign-up-email-label" class="hidden-accessible"
+          ><%=messages['email']%></label
+        >
+        <input
+          type="text"
+          id="sign-up-email"
+          name="sign-up-email"
+          placeholder="<%=messages['email']%>"
+          required
+          aria-required="true"
+          aria-labelledby="sign-up-email-label" />
+        <label for="sign-up-password" id="sign-up-password-label" class="hidden-accessible"
+          ><%=messages['password']%></label
+        >
+        <input
+          type="password"
+          id="sign-up-password"
+          name="sign-up-password"
+          placeholder="<%=messages['password']%>"
+          required
+          aria-required="true"
+          aria-labelledby="sign-up-password-label" />
+        <label
+          for="sign-up-password-repeat"
+          id="sign-up-password-repeat-label"
+          class="hidden-accessible"
+          ><%=messages['password_repeat']%></label
+        >
+        <input
+          type="password"
+          id="sign-up-password-repeat"
+          name="sign-up-password-repeat"
+          placeholder="<%=messages['password_repeat']%>"
+          required
+          aria-required="true"
+          aria-labelledby="sign-up-password-repeat-label" />
+        <label for="sign-up-code" id="sign-up-code-label" class="hidden-accessible"
+          ><%=messages['activation_code']%></label
+        >
+        <input
+          type="text"
+          id="sign-up-code"
+          name="sign-up-code"
+          placeholder="<%=messages['activation_code']%>"
+          required
+          aria-required="true"
+          aria-labelledby="sign-up-code-label" />
+        <input type="submit" value="<%=messages['signup']%>" aria-label="Sign up" />
+        <span
+          ><%=messages['have_account']%>
+          <a class="sign-in-button" role="button" aria-label="Navigate to sign in"
+            ><%=messages['signin']%></a
+          ></span
+        >
+      </form>
+      <form class="forgot-password" method="POST" action="" aria-labelledby="forgotPasswordForm">
+        <h2 id="forgotPasswordForm"><%=messages['change_password']%></h2>
+        <label
+          for="forgot-password-email"
+          id="forgot-password-email-label"
+          class="hidden-accessible"
+          ><%=messages['email']%></label
+        >
+        <input
+          type="text"
+          id="forgot-password-email"
+          name="forgot-password-email"
+          placeholder="<%=messages['email']%>"
+          required
+          aria-required="true"
+          aria-labelledby="forgot-password-email-label" />
+        <label for="forgot-password-code" id="forgot-password-code-label" class="hidden-accessible"
+          ><%=messages['activation_code']%></label
+        >
+        <input
+          type="text"
+          id="forgot-password-code"
+          name="forgot-password-code"
+          placeholder="<%=messages['activation_code']%>"
+          required
+          aria-required="true"
+          aria-labelledby="forgot-password-code-label" />
+        <label
+          for="forgot-password-password"
+          id="forgot-password-password-label"
+          class="hidden-accessible"
+          ><%=messages['password_new']%></label
+        >
+        <input
+          type="password"
+          id="forgot-password-password"
+          name="forgot-password-password"
+          placeholder="<%=messages['password_new']%>"
+          required
+          aria-required="true"
+          aria-labelledby="forgot-password-password-label" />
+        <label
+          for="forgot-password-password-repeat"
+          id="forgot-password-password-repeat-label"
+          class="hidden-accessible"
+          ><%=messages['password_new_repeat']%></label
+        >
+        <input
+          type="password"
+          id="forgot-password-password-repeat"
+          name="forgot-password-password-repeat"
+          placeholder="<%=messages['password_new_repeat']%>"
+          required
+          aria-required="true"
+          aria-labelledby="forgot-password-password-repeat-label" />
+        <input
+          type="submit"
+          value="<%=messages['change_password']%>"
+          aria-label="Change password" />
+        <span
+          ><%=messages['remember_password']%>
+          <a class="sign-in-button" role="button" aria-label="Navigate back to sign in"
+            ><%=messages['signin']%></a
+          ></span
+        >
+      </form>
+    </section>
+    <footer>
+      <div>
+        <p>&copy; <%=messages['footer']%></p>
+      </div>
+    </footer>
+  </body>
+</html>

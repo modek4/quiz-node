@@ -1,0 +1,35 @@
+<header class="header">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="navbar-open"
+    aria-label="<%=messages['navbar_open']%>"
+    role="button">
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+  <div class="search hidden-accessible" role="search">
+    <label id="search-input-label" for="search-input" class="hidden-accessible"
+      ><%=messages['search']%></label
+    >
+    <input
+      type="text"
+      placeholder="<%=messages['search_placeholder']%>"
+      class="search-input"
+      name="search-input"
+      id="search-input"
+      aria-labelledby="search-input-label"
+      aria-description="<%=messages['search_description']%>" />
+  </div>
+</header>
+<section class="report">
+  <h2>Otwarte pytania</h2>
+  <ul class="questions-open" role="list"></ul>
+  <h2>Zgłoszone pytania</h2>
+  <ul class="questions-body" role="list"></ul>
+</section>
